@@ -45,6 +45,12 @@ endif;
 <!--<![endif]-->
 
 <head>
+
+
+
+
+
+
 <?php if($this->params->get("useresponsivemode") == true ) : ?>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="google-site-verification" content="ch7tKkkao556cOK031qm9EU9YjYhvcmx9zwtnsua5xA" />
@@ -806,15 +812,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-116703165-1"></script>
 <script>
 window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
 
-gtag('config', 'UA-116703165-1', { 'optimize_id': 'GTM-KL38G5X'});
+// function gtag(){dataLayer.push(arguments);}
+// gtag('js', new Date());
+
+// gtag('config', 'UA-116703165-1', { 'optimize_id': 'GTM-KL38G5X'});
+
+
+
+
 </script>
 
 
 
-<?php include_once("analyticstracking.php") ?>         	          	    
+<?php //include_once("analyticstracking.php") ?>
+
+
 <header id="top-handler">
 	
 	
@@ -903,7 +916,6 @@ gtag('config', 'UA-116703165-1', { 'optimize_id': 'GTM-KL38G5X'});
 		</div>
 	</div>
 </header>
-
 <div class="nav-line-menu">
 	<div class="container navline_wrap">
 		<div class="row-fluid">
@@ -913,7 +925,6 @@ gtag('config', 'UA-116703165-1', { 'optimize_id': 'GTM-KL38G5X'});
 		</div>
 	</div>
 </div>
-
 <?php if( $this->countModules('position-2')) : ?>
 <div id="nav-line">
 	<div class="container nav_wrap">
@@ -923,9 +934,6 @@ gtag('config', 'UA-116703165-1', { 'optimize_id': 'GTM-KL38G5X'});
 	</div>
 </div>
 <?php endif; ?>
-
-
-
 <div class="container main-bg" id="main-handler">
 
 	<?php if( $this->countModules('top-1 or top-2 or top-3 or top-4 or top-5 or top-6')) : ?>
@@ -1146,8 +1154,6 @@ gtag('config', 'UA-116703165-1', { 'optimize_id': 'GTM-KL38G5X'});
 		</div>
 	</div>
 </div>
-
-
 <?php if( $this->countModules('bottom-long')) : ?>
 <section id="bottom-long">
 	<div class="container">
@@ -1159,9 +1165,6 @@ gtag('config', 'UA-116703165-1', { 'optimize_id': 'GTM-KL38G5X'});
 	</div>
 </section>
 <?php endif; ?>
-
-
-
 <section id="bottom-bg">
 	<div class="container">
 		<?php if( $this->countModules('bottom-1 or bottom-2 or bottom-3 or bottom-4 or bottom-5 or bottom-6')) : ?>
@@ -1179,9 +1182,6 @@ gtag('config', 'UA-116703165-1', { 'optimize_id': 'GTM-KL38G5X'});
 		<?php endif; ?>
 	</div>
 </section>
-
-
-
 <?php if( $this->countModules('footer or footer-left or footer-right')) : ?>
 <footer id="footer">
 	<div class="container">
@@ -1230,12 +1230,10 @@ gtag('config', 'UA-116703165-1', { 'optimize_id': 'GTM-KL38G5X'});
 	</div>
 </footer>
 <?php endif; ?>
-
 <?php /* ---------- Заказать звонок --------- */?>
 <div id="zvonok_feedback" class="rsform_feedback nomobile">
 	<jdoc:include type="modules" name="zakaz-zvonok" />
 </div>
-	
 <?php if($this->params->get("bodybackgroundimage")) : ?>
 <script type="text/javascript" src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/jquery.backstretch.min.js"></script>
 
@@ -1245,19 +1243,11 @@ jQuery.backstretch("<?php echo $this->params->get("bodybackgroundimage"); ?>");
 <?php endif; ?>
 <jdoc:include type="modules" name="debug" />
 <?php echo $this->params->get("footercode"); ?>
-
-<script type="text/javascript" src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/updateProductDetail.js"></script>
-<script type="text/javascript" src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/registracia.js"></script>
-<script type="text/javascript" src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/common.min.js"></script>
-
-
-<script>jQuery.noConflict();</script>
-<script type="text/javascript" src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/inputmask_by_gartes.min.js?v=1"></script>
-
 <?php /* ---------- getresponse--------- */?>
 <jdoc:include type="modules" name="getresponse" />
 
-<!--script src="//code.jivosite.com/widget/5hje6Gho12" async></script-->
+
+
 
 
 <?php /* --  Google Tag Manager -- */ ?>
@@ -1267,6 +1257,49 @@ jQuery.backstretch("<?php echo $this->params->get("bodybackgroundimage"); ?>");
         'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-T62TJ48');</script>
 <?php /* -- End Google Tag Manager --*/?>
+
+
+<script type="text/javascript" src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/updateProductDetail.js"></script>
+<script type="text/javascript" src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/registracia.js"></script>
+<script type="text/javascript" src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/common.min.js"></script>
+<script type="text/javascript" src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/inputmask_by_gartes.min.js?v=1"></script>
+<script>
+    jQuery.noConflict();
+    dataLayer.push({
+        'ecommerce': {
+            'currencyCode': 'EUR',                       // Local currency is optional.
+            'impressions': [
+                {
+                    'name': 'Triblend Android T-Shirt',       // Name or ID is required.
+                    'id': '12345',
+                    'price': '15.25',
+                    'brand': 'Google',
+                    'category': 'Apparel',
+                    'variant': 'Gray',
+                    'list': 'Search Results',
+                    'position': 1
+                },
+                {
+                    'name': 'Donut Friday Scented T-Shirt',
+                    'id': '67890',
+                    'price': '33.75',
+                    'brand': 'Google',
+                    'category': 'Apparel',
+                    'variant': 'Black',
+                    'list': 'Search Results',
+                    'position': 2
+                }]
+        }
+    });
+    console.log('dataLayer==>>>' ,  dataLayer )
+
+
+
+</script>
+<!--script src="//code.jivosite.com/widget/5hje6Gho12" async></script-->
+
+
+
 	
 </body>
 </html>
