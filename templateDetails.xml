@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE install PUBLIC "-//Joomla! 2.5//DTD template 1.0//EN"
         "http://www.joomla.org/xml/dtd/1.6/template-install.dtd">
-<extension version="3.1" type="template" client="site">
+<extension type="template" method="upgrade" version="3.0" client="site">
     <name>transform</name>
     <creationDate>2020.09.17</creationDate>
     <author>virtuemarttemplates.net</author>
@@ -57,7 +57,7 @@
         <folder>utils/</folder>
     </files>
     <updateservers>
-        <server type="extension" name="Template pro-spec elektro">https://raw.githubusercontent.com/GJTemplate/pro-spec.ru-elektro/master/template_update.xml</server>
+        <server type="extension" name="Template pro-spec elektro">https://raw.githubusercontent.com/GJTemplate/msvet.com.ua-transform/master/update.xml</server>
     </updateservers>
     <positions>
         <position>top-left-1</position>
