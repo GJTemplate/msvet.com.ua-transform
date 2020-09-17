@@ -10,6 +10,8 @@
     <version>21.0.3</version>
     <description>21.0.3 transform</description>
     <files>
+
+
         <filename>component.php</filename>
         <filename>error.php</filename>
         <filename>favicon.ico</filename>
@@ -17,8 +19,6 @@
         <filename>index.php</filename>
         <filename>templateDetails.xml</filename>
         <filename>README.md</filename>
-
-
         <folder>css/</folder>
         <folder>html/</folder>
         <folder>images/</folder>
