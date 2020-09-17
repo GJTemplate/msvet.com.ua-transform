@@ -1,0 +1,12 @@
+.cartproduct_title {
+    width: 100%;
+    background: rgb(40, 118, 6);
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: bold;
+}
+.tableheder {
+  float: left;
+  padding: 0 10px;
+}

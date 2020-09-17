@@ -1,0 +1,944 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 2.5//DTD template 1.0//EN"
+        "http://www.joomla.org/xml/dtd/1.6/template-install.dtd">
+<extension version="3.1" type="template" client="site">
+    <name>transform</name>
+    <creationDate>2020.09.17</creationDate>
+    <author>virtuemarttemplates.net</author>
+    <authorEmail>team@virtuemarttemplates.net</authorEmail>
+    <authorUrl>http://www.virtuemarttemplates.net</authorUrl>
+    <copyright>http://virtuemarttemplates.net/terms-of-service.html</copyright>
+    <license>Commercial</license>
+    <version>21.0.1</version>
+    <description>&lt;p style='text-align:left;clear:both;width:100%;'&gt;&lt;img
+        src='../templates/transform/template_thumbnail.png' style='text-align:left;float:none;' /&gt;&lt;/p&gt;
+        &lt;p style='font-size:13px;line-height:18px;text-align:left;'&gt;
+        Joomla template developed and released by &lt;a href='http://www.virtuemarttemplates.net/'&gt;www.virtuemarttemplates.net&lt;/a&gt;.
+        This Joomla template is not free or public and can not be resold or redistributed. By downloading and using this
+        template you have agreed to use the template in accordance with the terms of service outlined at &lt;a
+        href='http://www.virtuemarttemplates.net/'&gt;www.virtuemarttemplates.net&lt;/a&gt; &lt;/p&gt; &lt;p
+        style='text-align:left;font-size:13px;line-height:20px;'&gt;
+        - Looking for support? Go to &lt;a href='http://www.virtuemarttemplates.net/Support.html' target='blank'&gt;virtuemarttemplates.net
+        Support&lt;/a&gt; and open a ticket &lt;br /&gt;
+        - &lt;a href='http://www.virtuemarttemplates.net/Template-Customization.html' target='blank'&gt;virtuemarttemplates.net
+        - Template Customization &lt;/a&gt; if you need template customization services &lt;br /&gt;
+        - &lt;a href='http://www.virtuemarttemplates.net/' target='blank'&gt;virtuemarttemplates.net &lt;/a&gt; for
+        templates news, template upgrades and much more ... &lt;br /&gt;
+        &lt;/p&gt;
+        <![CDATA[<style type="text/css">.row-fluid.form-horizontal-desktop .span6,#details .span3,#details .span9{float:none !important;width:100% !important;margin:0px !important;}.form-horizontal .control-group{margin-bottom:0px !important;padding:8px 0px;border-bottom:1px solid #dddddd;}@media (max-width:480px){.spacer .inline-help label{width:180px !important;min-width:180px !important;}label{width:100% !important; max-width:100%; min-width:100%;}}@media (min-width:481px) and (max-width:767px){.spacer .inline-help label{width:380px !important;min-width:380px !important;}label,.control-label,.controls{display:inline-block !important;}.control-label{padding-right:5px !important;}}@media (min-width:768px){.nav-tabs{width:21%;margin-right:0;float:left;border-bottom:none;position:fixed;margin-top:10px;}.nav-tabs>li{float:none !important; margin-bottom:3px;}.nav-tabs>li>a{border:none; -webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px;background:#f5f5f5;margin:0px !important;}.nav-tabs>.active>a,.nav-tabs>.active>a:hover,.nav-tabs>.active>a:focus{color:#ffffff;background-color:#2b80c1;border:none;}.tab-content{background:#ffffff;width:75%;float:left;margin-left:23%;padding:5px 1% 20px 1%;-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px;-webkit-box-shadow:0px 0px 5px rgba(0,0,0,0.18);-moz-box-shadow:0px 0px 5pxx rgba(0,0,0,0.18);box-shadow:0px 0px 5px rgba(0,0,0,0.18);border:1px solid #dddddd;min-height:360px;}}@media (max-width:767px){.nav-tabs{border-bottom:none;}.nav-tabs>li{float:none !important;margin-bottom:3px;}.nav-tabs>li>a{border:none; -webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px;background:#f5f5f5;margin:0px !important;}.nav-tabs>.active>a,.nav-tabs>.active>a:hover,.nav-tabs>.active>a:focus{color:#ffffff;background-color:#2b80c1;border:none;}}@media (min-width:768px) and (max-width:979px){.spacer .inline-help label{width:460px !important;min-width:460px !important;}label,.control-label,.controls{display:inline-block !important;}.control-label{padding-right:5px !important;}}@media (min-width:980px){.spacer .inline-help label{width:610px !important;min-width:610px !important;}label,.control-label,.controls{display:inline-block !important;}.control-label{padding-right:5px !important;}}.spacer .inline-help label{display:block; padding:14px 20px !important; margin:0px 0px 5px 0px !important; background:#2b80c1; color:#ffffff; text-shadow:-1px -1px 0px rgba(0,0,0,0.2);box-shadow:2px 2px 3px rgba(0,0,0,0.18);-moz-box-shadow:2px 2px 3px rgba(0,0,0,0.18);-webkit-box-shadow:2px 2px 3px rgba(0,0,0,0.18);border-bottom-left-radius:3px 3px;border-bottom-right-radius:3px 3px;border-top-left-radius:3px 3px !important;border-top-right-radius:3px 3px !important;-moz-border-radius:3px 3px 3px 3px;}div.label{display:block !important;background:#f5f5f5 !important;border:1px solid #eeeeee;padding:10px;width:400px !important;min-width:400px !important;max-width:400px !important;-webkit-box-shadow:#dedede 0px 0px 0px 1px,rgba(0,0,0,0.296875) 1px 2px 5px;box-shadow:#dedede 0px 0px 0px 1px,rgba(0,0,0,0.296875) 1px 2px 5px;}label{width:160px !important; max-width:160px; min-width:160px;}
+	.input-color { padding: 3px !important; font-size: 12px;background-image: url(../templates/transform/images/color_wheel.png);background-position: 4px 5px;background-repeat: no-repeat;cursor: pointer;text-transform: uppercase;border: 1px solid #CCC !important;border-bottom-left-radius: 5px 5px !important;border-bottom-right-radius: 5px 5px !important;border-top-left-radius: 5px 5px !important;border-top-right-radius: 5px 5px !important;padding: 5px 5px 5px 26px !important;}
+	.input-text {background-image: #ffffff;border: 1px solid #CCC !important;border-bottom-left-radius: 5px 5px !important;border-bottom-right-radius: 5px 5px !important;border-top-left-radius: 5px 5px !important;border-top-right-radius: 5px 5px !important;padding: 5px 5px 5px 5px !important;}
+	.pane-sliders {padding: 6px;background: #ffffff;box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.28);-moz-box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.28);-webkit-box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.28);border-bottom-left-radius: 6px 6px;border-bottom-right-radius: 6px 6px;border-top-left-radius: 6px 6px !important;border-top-right-radius: 6px 6px !important;-moz-border-radius:6px 6px 6px 6px;}
+	.pane-sliders .panel h3 {font-size: 15px;margin-bottom: 5px;text-transform: uppercase;font-weight: normal;padding: 9px 9px;text-shadow: 1px 1px 3px rgba(0,0,0, 0.4);border: 1px solid #cccccc !important;box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.18);-moz-box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.18);-webkit-box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.18);border-bottom-left-radius: 3px 3px;border-bottom-right-radius: 3px 3px;border-top-left-radius: 3px 3px !important;border-top-right-radius: 3px 3px !important;-moz-border-radius:3px 3px 3px 3px;}
+	.pane-sliders .panel h3 a {color: #444444;}
+	.pane-sliders .panel {border: 0px;}
+	ul.adminformlist, ul.adminformlist li {clear: both; padding: 5px 0px !important;display:block !important;height:100%; }
+	.switch{cursor: pointer;display: inline-block;overflow: hidden;position: relative;width: 105px;height: 30px;vertical-align: middle;}
+	.switch .background {background: url('../templates/transform/utils/images/switch-background.png');display: block;position: absolute;top: 0;left: 0;width: 160px;height: 30px;}
+	.switch .mask {background: url('../templates/transform/utils/images/switch-mask.png');display: block;position: absolute;top: 0;left: 0;width: 105px;height: 30px;}
+    </style>
+	<script type="text/javascript" src="../templates/transform/utils/admin-js.js"></script>
+    <script type="text/javascript" src="../templates/transform/utils/js_colourchanger/jscolor.js"></script>]]>
+    </description>
+    <files>
+        <filename>component.php</filename>
+        <filename>error.php</filename>
+        <filename>favicon.ico</filename>
+        <filename>index.html</filename>
+        <filename>index.php</filename>
+        <filename>templateDetails.xml</filename>
+        <filename>template_thumbnail.png</filename>
+        <filename>template_preview.png</filename>
+        <folder>css/</folder>
+        <folder>html/</folder>
+        <folder>images/</folder>
+        <folder>language/</folder>
+        <folder>js/</folder>
+        <folder>utils/</folder>
+    </files>
+    <updateservers>
+        <server type="extension" name="Template pro-spec elektro">https://raw.githubusercontent.com/GJTemplate/pro-spec.ru-elektro/master/template_update.xml</server>
+    </updateservers>
+    <positions>
+        <position>top-left-1</position>
+        <position>top-left-2</position>
+        <position>cart</position>
+        <position>currency</position>
+        <position>language</position>
+        <position>position-7</position>
+        <position>bottom-left-1</position>
+        <position>bottom-left-2</position>
+        <position>top-right-1</position>
+        <position>top-right-2</position>
+        <position>position-6</position>
+        <position>bottom-right-1</position>
+        <position>bottom-right-2</position>
+        <position>builtin-slideshow</position>
+        <position>slideshow</position>
+        <position>banner-slid</position>
+        <position>banner-1170</position>
+        <position>header-left</position>
+        <position>header-right</position>
+        <position>header-right2</position>
+        <position>search</position>
+        <position>quick-menu</position>
+        <position>tab_3</position>
+        <position>tab_4</position>
+        <position>tab_5</position>
+        <position>top-long</position>
+        <position>banner-top-header</position>
+        <position>header-top-tel</position>
+        <position>top-1</position>
+        <position>top-2</position>
+        <position>top-3</position>
+        <position>top-4</position>
+        <position>top-5</position>
+        <position>top-6</position>
+        <position>top-7</position>
+        <position>top-8</position>
+        <position>top-9</position>
+        <position>top-10</position>
+        <position>top-11</position>
+        <position>top-12</position>
+        <position>top-a</position>
+        <position>top-b</position>
+        <position>top-c</position>
+        <position>top-d</position>
+        <position>top-a1</position>
+        <position>top-b1</position>
+        <position>top-c1</position>
+        <position>top-d1</position>
+        <position>top-a2</position>
+        <position>top-b2</position>
+        <position>top-c2</position>
+        <position>top-d2</position>
+        <position>top-a3</position>
+        <position>top-b3</position>
+        <position>top-c3</position>
+        <position>top-d3</position>
+        <position>top-a4</position>
+        <position>top-b4</position>
+        <position>top-c4</position>
+        <position>top-d4</position>
+        <position>loginform</position>
+        <position>position-3</position>
+        <position>position-2</position>
+        <position>position-1</position>
+        <position>position-0</position>
+        <position>bottom-long</position>
+        <position>bottom-1</position>
+        <position>bottom-2</position>
+        <position>bottom-3</position>
+        <position>bottom-4</position>
+        <position>bottom-5</position>
+        <position>bottom-6</position>
+        <position>bottom-a</position>
+        <position>bottom-b</position>
+        <position>bottom-c</position>
+        <position>bottom-d</position>
+        <position>footer</position>
+        <position>footer-left</position>
+        <position>footer-right</position>
+        <position>footer-admenu</position>
+        <position>debug</position>
+        <position>text-tel</position>
+        <position>cat_virtuemart1</position>
+        <position>cat_virtuemart2</position>
+        <position>cat_virtuemart3</position>
+        <position>cat_virtuemart4</position>
+        <position>cat_virtuemart5</position>
+        <position>cat_virtuemart6</position>
+        <position>cat_virtuemart7</position>
+        <position>cat_virtuemart8</position>
+        <position>cat_virtuemart9</position>
+        <position>cat_virtuemart10</position>
+        <position>image-rendom1</position>
+        <position>image-rendom2</position>
+        <position>rsform-contact</position>
+        <position>language_top</position>
+        <position>top-menu</position>
+        <position>mod-home-1</position>
+        <position>mod-home-2</position>
+        <position>mod-home-3</position>
+        <position>mod-home-4</position>
+        <position>mod-home-5</position>
+        <position>getresponse</position>
+        <position>lustry-nedorogie</position>
+    </positions>
+    <languages folder="language">
+        <language tag="en-GB">en-GB/en-GB.tpl_transform.ini</language>
+        <language tag="en-GB">en-GB/en-GB.tpl_transform.sys.ini</language>
+    </languages>
+    <config>
+        <fields name="params">
+            <fieldset name="basics" label="TPL_transform_BASIC_SETTINGS_TAB">
+                <field type="spacer" class="inline-help" label="TPL_transform_WELCOME_LABEL"/>
+                <field name="contentfontsize" class="input-text" type="text" default="14px"
+                       label="TPL_transform_CONTENTFONTSIZE_LABEL" description="TPL_transform_CONTENTFONTSIZE_DESC"
+                       size="10"/>
+            </fieldset>
+            <fieldset name="sitename" label="TPL_transform_SITENAME_SETTINGS_TAB">
+                <field name="topheight" type="text" class="input-text" label="TPL_transform_TOPHEIGHT_LABEL"
+                       default="120" description="TPL_transform_TOPHEIGHT_DESC" size="10"/>
+                <field type="spacer" class="inline-help" label="TPL_transform_SITENAMEIMAGE_HELP"/>
+                <field name="H1Title" type="textarea" filter="raw" class="input-text"
+                       label="TPL_transform_H1TITLE_LABEL" description="TPL_transform_H1TITLE_DESC" rows="2" cols="60"/>
+                <field name="logoLinked" class="switch" type="checkbox" label="TPL_transform_LOGOLINKED_LABEL"
+                       description="TPL_transform_LOGOLINKED_DESC" value="true"/>
+                <field name="H1TitleImgText" class="switch" type="checkbox" label="TPL_transform_H1TITLEIMGTEXT_LABEL"
+                       description="TPL_transform_H1TITLEIMGTEXT_DESC" value="true"/>
+                <field class="input-color" name="sitenamecolor" type="text" default="#2b2b2b"
+                       label="TPL_transform_SITENAMECOLOR_LABEL" description="TPL_transform_SITENAMECOLOR_DESC"
+                       size="7"/>
+                <field name="sitenamefontsize" class="input-text" type="text" default="40px"
+                       label="TPL_transform_SITENAMEFONTSIZE_LABEL" description="TPL_transform_SITENAMEFONTSIZE_DESC"
+                       size="10"/>
+
+                <field name="H1Titleimage" label="Built-in Site Name" type="media" directory="images"
+                       description="Selecr your site name image. Click Select button and upload your image to the server. Once your site name image is uploaded to the server you can select it on file list."/>
+
+                <field name="H1TitlePositionX" default="9" class="input-text" type="text"
+                       label="TPL_transform_H1TITLEPOSITIONX_LABEL" description="TPL_transform_H1TITLEPOSITIONX_DESC"
+                       size="10"/>
+                <field name="H1TitlePositionY" default="32" class="input-text" type="text"
+                       label="TPL_transform_H1TITLEPOSITIONY_LABEL" description="TPL_transform_H1TITLEPOSITIONY_DESC"
+                       size="10"/>
+                <field type="spacer" class="inline-help" label="TPL_transform_SLOGAN_HELP"/>
+                <field name="H2Title" class="input-text" filter="raw" type="textarea" label="TPL_transform_SLOGAN_LABEL"
+                       description="TPL_transform_SLOGAN_DESC" rows="2" cols="60"/>
+                <field class="input-color" name="slogancolor" type="text" default="#8e8e8e"
+                       label="TPL_transform_SLOGAN_COLOR_LABEL" description="TPL_transform_SLOGAN_COLOR_DESC" size="7"/>
+                <field name="sloganfontsize" class="input-text" type="text" default="14px"
+                       label="TPL_transform_SLOGANFONTSIZE_LABEL" description="TPL_transform_SLOGANFONTSIZE_DESC"
+                       size="10"/>
+                <field name="H2TitlePositionX" default="10" class="input-text" type="text"
+                       label="TPL_transform_H2TITLEPOSITIONX_LABEL" description="TPL_transform_H2TITLEPOSITIONX_DESC"
+                       size="10"/>
+                <field name="H2TitlePositionY" default="69" class="input-text" type="text"
+                       label="TPL_transform_H2TITLEPOSITIONY_LABEL" description="TPL_transform_H2TITLEPOSITIONY_DESC"
+                       size="10"/>
+                <field name="H2TitleImgText" class="switch" type="checkbox" label="TPL_transform_H2TITLEIMGTEXT_LABEL"
+                       description="TPL_transform_H2TITLEIMGTEXT_DESC" value="true"/>
+                <field name="H2Titleimage" label="TPL_transform_H2TITLEIMAGE_LABEL" type="media" directory="images"
+                       description="Selecr your slogan image. Click Select button and upload your image to the server. Once your site slogan image is uploaded to the server you can select it on file list."/>
+            </fieldset>
+            <fieldset name="communitysettings" label="TPL_transform_COMMUNITYSETTINGS">
+                <field type="spacer" class="inline-help" label="TPL_transform_COMMUNITYSETTINGS_HELP"/>
+                <field name="twitter" class="input-text" type="text" label="TPL_transform_TWITTER_LABEL"
+                       description="TPL_transform_TWITTER_DESC" size="80"/>
+                <field name="twitterON" class="switch" type="checkbox" label="TPL_transform_TWITTERON_LABEL"
+                       description="TPL_transform_TWITTERON_DESC" value="true"/>
+                <field name="gplus" class="input-text" type="text" label="Google Plus"
+                       description="Type your Google Plus URL" size="80"/>
+                <field name="gplusON" class="switch" type="checkbox" label="Google Plus ON/OFF"
+                       description="Turn ON/OFF Google Plus" value="true"/>
+                <field name="facebook" class="input-text" type="text" label="Facebook"
+                       description="Type your Facebook URL" size="80"/>
+                <field name="facebookON" class="switch" type="checkbox" label="Facebook ON/OFF"
+                       description="Turn ON/OFF Facebook" value="true"/>
+                <field name="RSS" class="input-text" type="text" label="RSS" description="Type your RSS URL" size="80"/>
+                <field name="RSSON" class="switch" type="checkbox" label="RSS ON/OFF" description="Turn ON/OFF RSS"
+                       value="true"/>
+                <field name="linkedin" class="input-text" type="text" label="Linkedin"
+                       description="Type your Linkedin URL" size="80"/>
+                <field name="linkedinON" class="switch" type="checkbox" label="Linkedin ON/OFF"
+                       description="Turn ON/OFF Linkedin" value="true"/>
+                <field name="myspace" class="input-text" type="text" label="MySpace" description="Type your MySpace URL"
+                       size="80"/>
+                <field name="myspaceON" class="switch" type="checkbox" label="MySpace ON/OFF"
+                       description="Turn ON/OFF MySpace" value="true"/>
+                <field name="vimeo" class="input-text" type="text" label="Vimeo" description="Type your Vimeo URL"
+                       size="80"/>
+                <field name="vimeoON" class="switch" type="checkbox" label="Vimeo ON/OFF"
+                       description="Turn ON/OFF Vimeo" value="true"/>
+                <field name="stumbleupon" class="input-text" type="text" label="Stumbleupon"
+                       description="Type your Stumbleupon URL" size="80"/>
+                <field name="stumbleuponON" class="switch" type="checkbox" label="Stumbleupon ON/OFF"
+                       description="Turn ON/OFF Stumbleupon" value="true"/>
+                <field name="digg" class="input-text" type="text" label="DIGG" description="Type your DIGG URL"
+                       size="80"/>
+                <field name="diggON" class="switch" type="checkbox" label="DIGG ON/OFF" description="Turn ON/OFF DIGG"
+                       value="true"/>
+                <field name="blogger" class="input-text" type="text" label="TPL_transform_BLOGGER_LABEL"
+                       description="TPL_transform_BLOGGER_DESC" size="80"/>
+                <field name="bloggerON" class="switch" type="checkbox" label="Blogger ON/OFF"
+                       description="Turn ON/OFF Blogger" value="true"/>
+            </fieldset>
+
+            <fieldset name="DropDownMenuSettings" label="Drop Down Menu Settings">
+                <field name="usedropdown" class="switch" type="checkbox" label="ON/OFF drop down menu" description=""
+                       value="true"/>
+                <field name="dropopacity" class="switch" type="checkbox" label="ON/OFF drop down opacity" description=""
+                       value="true"/>
+                <field name="dropheight" class="switch" type="checkbox" label="ON/OFF drop down height" description=""
+                       value="true"/>
+                <field name="dropwidth" class="switch" type="checkbox" label="ON/OFF drop down width" description=""
+                       value="true"/>
+                <field name="dropspeed" class="input-text" type="list" default="normal" label="Drop Down Speed"
+                       description="">
+                    <option value="slow">Slow</option>
+                    <option value="normal">Normal</option>
+                    <option value="fast">Fast</option>
+                </field>
+                <field name="dropdownhandler1" class="input-text" type="text" label="Min column width (em)" default="15"
+                       description="Set the default drop down handler width" size="10"></field>
+                <field name="dropdownhandler2" class="input-text" type="text" label="Drop Down 2 columns width (px)"
+                       default="360"
+                       description="Change the width for a drop down menu handler (Menu Items sorted in 2 columns)"
+                       size="10"></field>
+                <field name="dropdownhandler3" class="input-text" type="text" label="Drop Down 3 columns width (px)"
+                       default="500"
+                       description="Change the width for a drop down menu handler (Menu Items sorted in 3 columns)"
+                       size="10"></field>
+                <field name="dropdownhandler4" class="input-text" type="text" label="Drop Down 4 columns width (px)"
+                       default="660"
+                       description="Change the width for a drop down menu handler (Menu Items sorted in 4 columns)"
+                       size="10"></field>
+                <field name="dropdownhandler5" class="input-text" type="text" label="Drop Down 5 columns width (px)"
+                       default="860"
+                       description="Change the width for a drop down menu handler (Menu Items sorted in 5 columns)"
+                       size="10"></field>
+            </fieldset>
+            <fieldset name="customcode" label="Template Header And Footer Custom Code">
+
+                <field type="spacer" class="inline-help"
+                       label="Using text fields below you can put your custom code in the document head and in the footer. This option is very usable if you would like to put Google Analytics or any other 3rd parties. "/>
+
+                <field name="headcode" type="textarea" filter="raw" class="input-text"
+                       label="Insert code into template header"
+                       description="This field allows to put the code between [head] and [/head]" rows="10" cols="60"/>
+                <field name="footercode" type="textarea" filter="raw" class="input-text"
+                       label="Insert code into template footer"
+                       description="This field allows to put the code before the closing [/body] tag" rows="10"
+                       cols="60"/>
+
+            </fieldset>
+            <fieldset name="slideshowsettings" label="Built-in Slideshow Settings">
+
+                <field name="cam_turnOn" class="switch" type="checkbox" label="Turn Slideshow ON/OFF"
+                       description="Set On if you would like to use built-in slideshow. Set OFF if you are planning to use any 3rd party extensions."
+                       value="true"/>
+
+                <field name="cam_autoAdvance" class="switch" type="checkbox" label="Turn ON/OFF autoplaying"
+                       description="Turn On if you would like to your slideshow to play automatically once your website load"
+                       value="true"/>
+
+                <field name="cam_mobileAutoAdvance" class="switch" type="checkbox"
+                       label="Turn ON/OFF autoplaying for mobiles"
+                       description="Turn On if you would like to your slideshow to play automatically once your website load on mobile devices"
+                       value="true"/>
+
+                <field name="cam_slideOn" class="input-text" type="list" default="random" label="Slide Effect On"
+                       description="Decide if the transition effect will be applied to the current (prev) or the next slide">
+                    <option value="random">Random</option>
+                    <option value="next">Next</option>
+                    <option value="prev">Prev</option>
+                </field>
+
+                <field name="cam_thumbnails" class="switch" type="checkbox" label="Turn ON/OFF thumbnails"
+                       description="Turn On thumbnails for slideshow" value="true"/>
+
+                <field name="cam_time" class="input-text" type="text" default="7000" label="Slide Duration (ms)"
+                       description="Milliseconds between the end of the sliding effect and the start of the nex one"
+                       size="6"/>
+
+                <field name="cam_transPeriod" class="input-text" type="text" default="1500"
+                       label="Animation Duration (ms)" description="Lenght of the sliding effect in milliseconds"
+                       size="6"/>
+
+                <field name="cam_cols" class="input-text" type="text" default="10"
+                       label="Columns for images transitions"
+                       description="Type a number of columns you want to split images during transitions" size="6"/>
+
+                <field name="cam_rows" class="input-text" type="text" default="10" label="Rows for images transitions"
+                       description="Type a number of rows you want to split images during transitions" size="6"/>
+
+                <field name="cam_slicedCols" class="input-text" type="text" default="10"
+                       label="Columns for sliced images transitions"
+                       description="Type a number of columns you want to slice images during transitions" size="6"/>
+
+                <field name="cam_slicedRows" class="input-text" type="text" default="10"
+                       label="Rows for sliced images transitions"
+                       description="Type a number of rows you want to slice images during transitions" size="6"/>
+
+                <field name="cam_fx" class="input-text" type="list" default="random" label="Choose FX Effects"
+                       description="Select a fx effect for the slides transitions. ">
+                    <option value="random">Random</option>
+                    <option value="simpleFade">simpleFade</option>
+                    <option value="curtainTopLeft">curtainTopLeft</option>
+                    <option value="curtainTopRight">curtainTopRight</option>
+                    <option value="curtainBottomLeft">curtainBottomLeft</option>
+                    <option value="curtainBottomRight">curtainBottomRight</option>
+                    <option value="curtainSliceLeft">curtainSliceLeft</option>
+                    <option value="curtainSliceRight">curtainSliceRight</option>
+                    <option value="blindCurtainTopLeft">blindCurtainTopLeft</option>
+                    <option value="blindCurtainTopRight">blindCurtainTopRight</option>
+                    <option value="blindCurtainBottomLeft">blindCurtainBottomLeft</option>
+                    <option value="blindCurtainBottomRight">blindCurtainBottomRight</option>
+                    <option value="blindCurtainSliceBottom">blindCurtainSliceBottom</option>
+                    <option value="blindCurtainSliceTop">blindCurtainSliceTop</option>
+                    <option value="stampede">stampede</option>
+                    <option value="mosaic">mosaic</option>
+                    <option value="mosaicReverse">mosaicReverse</option>
+                    <option value="mosaicRandom">mosaicRandom</option>
+                    <option value="mosaicSpiral">mosaicSpiral</option>
+                    <option value="mosaicSpiralReverse">mosaicSpiralReverse</option>
+                    <option value="topLeftBottomRight">topLeftBottomRight</option>
+                    <option value="bottomRightTopLeft">bottomRightTopLeft</option>
+                    <option value="bottomLeftTopRight">bottomLeftTopRight</option>
+                    <option value="bottomLeftTopRight">bottomLeftTopRight</option>
+                    <option value="scrollLeft">scrollLeft</option>
+                    <option value="scrollRight">scrollRight</option>
+                    <option value="scrollHorz">scrollHorz</option>
+                    <option value="scrollBottom">scrollBottom</option>
+                    <option value="scrollTop">scrollTop</option>
+                </field>
+
+                <field name="cam_fx_multiple_on" class="switch" type="checkbox" label="Use Multiple FX Effects"
+                       description="You can also use more than one effect, just type an effects names in field below. Separate values with commas:&lt;br /&gt;&lt;br /&gt;
+				&lt;code&gt;simpleFade, scrollRight, scrollBottom&lt;/code&gt;" value="true"/>
+
+                <field type="spacer" class="inline-help" label="&lt;b&gt;FX Effects:&lt;/b&gt;
+				&lt;br /&gt;
+				simpleFade, curtainTopLeft, curtainTopRight, curtainBottomLeft, &lt;br /&gt;
+				curtainBottomRight, curtainSliceLeft, curtainSliceRight, blindCurtainTopLeft, &lt;br /&gt;
+				blindCurtainTopRight, blindCurtainBottomLeft, blindCurtainBottomRight,&lt;br /&gt;
+				blindCurtainSliceBottom, blindCurtainSliceTop, stampede,&lt;br /&gt;
+				mosaic, mosaicReverse, mosaicRandom, mosaicSpiral, mosaicSpiralReverse,&lt;br /&gt;
+				topLeftBottomRight, bottomRightTopLeft, bottomLeftTopRight,&lt;br /&gt;
+				bottomLeftTopRight, scrollLeft, scrollRight, scrollHorz, scrollBottom, scrollTop"/>
+
+                <field name="cam_fx_multi" type="textarea" filter="raw" class="input-text" label="Multiple FX Effects"
+                       description="Type and separate an effects names with commas, for example:&lt;br /&gt;&lt;br /&gt;
+				&lt;code&gt;simpleFade, scrollRight, scrollBottom&lt;/code&gt;" rows="3" cols="60"/>
+
+                <field name="cam_gridDifference" class="input-text" type="text" default="250" label="Grid Difference"
+                       description="To make the grid blocks slower than the slices, this value must be smaller than Animation Duration"
+                       size="6"/>
+
+                <field name="cam_height" class="input-text" type="text" default="50%" label="Height"
+                       description="Here you can type pixels (for example 300px), a percentage (relative to the width of the slideshow, for instance 50%) or auto"
+                       size="6"/>
+
+                <field name="cam_minHeight" class="input-text" type="text" default="400px" label="Min Height"
+                       description="Here you can type pixels (for example 300px), a percentage (relative to the width of the slideshow, for instance 50%) or you can also leave it empty"
+                       size="6"/>
+
+                <field name="cam_hover" class="switch" type="checkbox" label="Pause on state hover"
+                       description="Pause on state hover. Not available for mobile devices" value="true"/>
+
+                <field name="cam_loader" class="input-text" type="list" default="pie" label="Loader"
+                       description="Choose loader style. Even if you choose pie, old browsers like IE8 can't display it. They will display always a loading bar instead.">
+                    <option value="pie">Pie</option>
+                    <option value="bar">Bar</option>
+                    <option value="none">None</option>
+                </field>
+
+                <field name="cam_barDirection" class="input-text" type="list" default="leftToRight"
+                       label="Bar Direction" description="Choose Bar Direction">
+                    <option value="leftToRight">Left To Right</option>
+                    <option value="rightToLeft">Right To Left</option>
+                    <option value="topToBottom">Top To Bottom</option>
+                    <option value="bottomToTop">Bottom To Top</option>
+                </field>
+
+                <field name="cam_barPosition" class="input-text" type="list" default="bottom" label="Bar Position"
+                       description="Choose Bar Position">
+                    <option value="bottom">Bottom</option>
+                    <option value="left">Left</option>
+                    <option value="top">Top</option>
+                    <option value="right">Right</option>
+                </field>
+
+                <field name="cam_pieDiameter" class="input-text" type="text" default="38" label="Pie Diameter"
+                       description="Type Pie Diameter" size="6"/>
+
+                <field name="cam_piePosition" class="input-text" type="list" default="rightTop" label="Pie Position"
+                       description="Choose Pie Position">
+                    <option value="rightTop">Right Top</option>
+                    <option value="leftTop">Left Top</option>
+                    <option value="leftBottom">Left Bottom</option>
+                    <option value="rightBottom">Right Bottom</option>
+                </field>
+
+                <field name="cam_loaderColor" class="input-color" type="text" default="#eeeeee" label="Loader Color"
+                       description="Choose Loader Color" size="7"/>
+
+                <field name="cam_loaderBgColor" class="input-color" type="text" default="#222222"
+                       label="Loader Background Color" description="Choose Loader Background Color" size="7"/>
+
+                <field name="cam_loaderOpacity" type="text" class="input-text" label="Loader Opacity" default="0.8"
+                       description="Choose loader opacity"/>
+
+                <field name="cam_loaderPadding" type="text" class="input-text" label="Loader Padding" default="1"
+                       description="Choose how many empty pixels you want to display between the loader and its background"/>
+
+                <field name="cam_loaderStroke" type="text" class="input-text" label="Loader Stroke" default="5"
+                       description="The thickness both of the pie loader and of the bar loader. Remember: for the pie, the loader thickness must be less than a half of the Pie Diameter"/>
+
+                <field name="cam_navigation" class="switch" type="checkbox" label="Navigation"
+                       description="Display navigation buttons" value="true"/>
+
+                <field name="cam_playPause" class="switch" type="checkbox" label="Play/Pause"
+                       description="Display play/pause buttons" value="true"/>
+
+                <field name="cam_navigationHover" class="switch" type="checkbox" label="Navigation Hover"
+                       description="If true the navigation button (prev, next and play/stop buttons) will be visible on hover state only, if false they will be visible always"
+                       value="true"/>
+
+                <field name="cam_mobileNavHover" class="switch" type="checkbox" label="Mobile Navigation Hover"
+                       description="If true the navigation button on Mobile devices (prev, next and play/stop buttons) will be visible on hover state only, if false they will be visible always"
+                       value="true"/>
+
+                <field name="cam_opacityOnGrid" class="switch" type="checkbox" label="Opacity On Grid"
+                       description="Decide to apply a fade effect to blocks and slices. If your slideshow is fullscreen or just big, it is strongly recommended to set it to false to have a smoother effect "
+                       value="true"/>
+
+                <field name="cam_pagination" class="switch" type="checkbox" label="Pagination"
+                       description="Display Pagination" value="true"/>
+
+                <field name="cam_pauseOnClick" class="switch" type="checkbox" label="Pause On Click"
+                       description="This option stops the slideshow when you click the sliders." value="true"/>
+
+                <field name="cam_portrait" class="switch" type="checkbox" label="Portrait"
+                       description="Select true if you don't want that your images are cropped" value="true"/>
+
+                <field name="cam_caption_y_position" class="input-text" default="26%" type="text"
+                       label="Specify the slide caption position"
+                       description="Specify the slide caption position - this is a space between a slide caption and top od the slideshow area"/>
+
+                <field name="cam_caption_width" class="input-text" default="48%" type="text"
+                       label="Specify the slide caption width"
+                       description="Specify the slide caption width. You can use % value or px."/>
+
+
+            </fieldset>
+
+            <fieldset name="vmtproductslider" label="Product Slider Settings">
+
+                <field name="vmtsl_delay" class="input-text" type="text" default="150" label="Animation Delay"
+                       description="Here you can set a delay for each item animation" size="6"/>
+
+                <field name="vmtsl_pause" class="input-text" type="text" default="4000" label="Slide Pause"
+                       description="Here you can set how long each slide will be visible" size="6"/>
+
+                <field name="vmtsl_numeric" class="switch" type="checkbox" label="Turn ON/OFF Pagination"
+                       description="Turn ON/OFF Pagination Dots" value="true"/>
+
+                <field name="vmtsl_nextprev" class="switch" type="checkbox" label="Turn ON/OFF Arrows"
+                       description="Turn ON/OFF Previous/Next Arrows" value="true"/>
+
+                <field name="vmtsl_auto" class="switch" type="checkbox" label="Turn ON/OFF Auto playing"
+                       description="Turn ON/OFF automatically playing" value="true"/>
+
+                <field name="vmtsl_loop" class="switch" type="checkbox" label="Turn ON/OFF Loop"
+                       description="Turn ON/OFF loop for auto playing. If OFF all items will play once" value="true"/>
+
+                <field name="vmtsl_clickstop" class="switch" type="checkbox" label="Turn ON/OFF Click Stop"
+                       description="Turn ON/OFF Click Stop. If set to ON then once you will click arrows or dots autoplaing will stop"
+                       value="true"/>
+
+
+            </fieldset>
+
+            <fieldset name="vmtproductimages" label="Product Images Settings">
+                <field name="useZoom" class="switch" type="checkbox" label="ON/OFF Zoom Images Script"
+                       description="Select ON to use Zoom script for your product image in Product Details. If OFF then the default VirtueMart solution will be used"
+                       value="true"/>
+                <field name="zoomType" class="input-text" type="list" default="lens" label="Select Zoom Type"
+                       description="Select a type of Zoom used for a product images.">
+                    <option value="lens">Lens Zoom</option>
+                    <option value="inner">Inner Zoom</option>
+                </field>
+                <field name="lensShape" class="input-text" type="list" default="round" label="Select Lens Type"
+                       description="Select a type of Zoom lens">
+                    <option value="round">Round</option>
+                    <option value="square">Square</option>
+                </field>
+                <field name="lensSize" class="input-text" type="text" default="200" label="Lens Size"
+                       description="Set a lens size" size="6"/>
+                <field name="cursor" class="input-text" type="list" default="default" label="Select Zoom Cursoe"
+                       description="Select a type of Zoom cursor">
+                    <option value="default">Default</option>
+                    <option value="crosshair">Crosshair</option>
+                    <option value="pointer">Pointer</option>
+                    <option value="none">None</option>
+                </field>
+                <field name="responsive" class="switch" type="checkbox" label="Responsive Mode"
+                       description="ON/OFF Responsive Mode - high recommended if you are using responsive template"
+                       value="true"/>
+            </fieldset>
+
+            <fieldset name="themesettings" label="Theme Settings">
+
+                <field name="useresponsivemode" class="switch" type="checkbox" label="Responsive Mode"
+                       description="ON/OFF Responsive (Mobile) mode" value="true"/>
+
+                <field name="nonresponsivesitewidth" class="input-text" type="text" default="1170px"
+                       label="Site Container Width (Responsive Mode OFF)"
+                       description="Set container width if the responsive mode is off. You can use pixels or percents"
+                       size="6"/>
+
+                <field name="bodybackgroundimage" label="Background Image" type="media" directory="images"
+                       description="Select your background image. If empty simple background color chosen below will be used."/>
+
+                <field name="usetheme" class="switch" type="checkbox" label="Built-in Theme"
+                       description="Select ON to use one of the built-in themes. Select OFF to customize the template colour scheme."
+                       value="true"/>
+
+                <field name="choosetheme" type="list" default="style3" label="Choose Theme" description="">
+                    <option value="style1">Theme 1</option>
+                    <option value="style2">Theme 2</option>
+                    <option value="style3">Theme 3</option>
+                    <option value="style4">Theme 4</option>
+                    <option value="style5">Theme 5</option>
+                    <option value="style6">Theme 6</option>
+                </field>
+
+                <field type="spacer" class="inline-help"
+                       label="To choose your own colors below simply click the text field to open the color selector tool."/>
+
+
+                <field class="input-color" name="color1" type="text" default="#ffffff" label="Main Background"
+                       description="" size="7"></field>
+                <field class="input-color" name="color2" type="text" default="#4c4c4c" label="Main Text Color"
+                       description="" size="7"></field>
+
+                <field class="input-color" name="color3" type="text" default="#32baec" label="Custom Color 1"
+                       description="" size="7"></field>
+                <field class="input-color" name="color4" type="text" default="#c52323" label="Custom Color 2"
+                       description="" size="7"></field>
+                <field class="input-color" name="color5" type="text" default="#d45e17" label="Custom Color 3"
+                       description="" size="7"></field>
+                <field class="input-color" name="color6" type="text" default="#95bd09" label="Custom Color 4"
+                       description="" size="7"></field>
+                <field class="input-color" name="color7" type="text" default="#fcfcfc" label="Top Line Background"
+                       description="" size="7"></field>
+
+                <field class="input-color" name="color8" type="text" default="#dedede" label="Top Line Border"
+                       description="" size="7"></field>
+                <field class="input-color" name="color9" type="text" default="#595959" label="Top Line Text Color"
+                       description="" size="7"></field>
+                <field class="input-color" name="color10" type="text" default="#595959" label="Top Line Link Color"
+                       description="" size="7"></field>
+                <field class="input-color" name="color11" type="text" default="#32baec"
+                       label="Top Line Active Link Color" description="" size="7"></field>
+                <field class="input-color" name="color12" type="text" default="#f5f5f5" label="Bottom Area Background"
+                       description="" size="7"></field>
+
+                <field class="input-color" name="color13" type="text" default="#e5e5e5" label="Bottom Area Top Border"
+                       description="" size="7"></field>
+                <field class="input-color" name="color14" type="text" default="#e5e5e5"
+                       label="Bottom Area Bottom Border" description="" size="7"></field>
+                <field class="input-color" name="color15" type="text" default="#8a8a8a"
+                       label="Search Inputbox Text Color" description="" size="7"></field>
+                <field class="input-color" name="color16" type="text" default="#dedede" label="Search Inputbox Border"
+                       description="" size="7"></field>
+                <field class="input-color" name="color17" type="text" default="#32baec" label="Default Link Color"
+                       description="" size="7"></field>
+
+                <field class="input-color" name="color18" type="text" default="#32baec" label="Default Price Color"
+                       description="" size="7"></field>
+                <field class="input-color" name="color19" type="text" default="#4c4c4c"
+                       label="Product Description Color/Headings" description="" size="7"></field>
+                <field class="input-color" name="color20" type="text" default="#ffffff" label="Category Heading Color"
+                       description="" size="7"></field>
+                <field class="input-color" name="color21" type="text" default="#32baec" label="Category Background"
+                       description="" size="7"></field>
+                <field class="input-color" name="color22" type="text" default="#17a1d4"
+                       label="Category Active Background" description="" size="7"></field>
+
+                <field class="input-color" name="color23" type="text" default="#353535" label="Product Name Color"
+                       description="" size="7"></field>
+                <field class="input-color" name="color24" type="text" default="#ffffff" label="Button Color"
+                       description="" size="7"></field>
+                <field class="input-color" name="color25" type="text" default="#32baec" label="Button Background Color"
+                       description="" size="7"></field>
+                <field class="input-color" name="color26" type="text" default="#32baec" label="Responsive Menu Button"
+                       description="" size="7"></field>
+                <field class="input-color" name="color27" type="text" default="#3d5a73"
+                       label="Responsive Menu Active Button" description="" size="7"></field>
+
+                <field class="input-color" name="color28" type="text" default="#32baec"
+                       label="Active Product Pop Up Buttons" description="" size="7"></field>
+                <field class="input-color" name="color29" type="text" default="#ffffff" label="Button Active Color"
+                       description="" size="7"></field>
+                <field class="input-color" name="color30" type="text" default="#17a1d4"
+                       label="Button Active Background Color" description="" size="7"></field>
+                <field class="input-color" name="color31" type="text" default="#17a1d4" label="Cart Label"
+                       description="" size="7"></field>
+                <field class="input-color" name="color31a" type="text" default="#ffffff"
+                       label="Responsive Menu Button Label" description="" size="7"></field>
+
+                <field class="input-color" name="color32" type="text" default="#333333" label="Cart Cloud Text Color"
+                       description="" size="7"></field>
+
+                <field class="input-color" name="color33" type="text" default="#ffffff" label="Cart Cloud Background"
+                       description="" size="7"></field>
+                <field class="input-color" name="color34" type="text" default="#ffffff" label="Cart Cloud Arrow"
+                       description="" size="7"></field>
+                <field class="input-color" name="color35" type="text" default="#17a1d4"
+                       label="Pop Up Login Form Drop Down Menu Active Link" description="" size="7"></field>
+                <field class="input-color" name="color36" type="text" default="#ffffff"
+                       label="Pop Up Login Form Drop Down Menu Caret" description="" size="7"></field>
+                <field class="input-color" name="color37" type="text" default="#fcfcfc"
+                       label="Default Module Background" description="" size="7"></field>
+
+
+                <field class="input-color" name="color38" type="text" default="#dedede" label="Default Module Border"
+                       description="" size="7"></field>
+                <field class="input-color" name="color39" type="text" default="#2b2b2b"
+                       label="Default Moduel Text Color" description="" size="7"></field>
+                <field class="input-color" name="color40" type="text" default="#ffffff"
+                       label="Product Handler Background" description="" size="7"></field>
+                <field class="input-color" name="color41" type="text" default="#dedede" label="Product Handler Border"
+                       description="" size="7"></field>
+                <field class="input-color" name="color42" type="text" default="#2b2b2b"
+                       label="Product Handler Text Color" description="" size="7"></field>
+
+                <field class="input-color" name="color43" type="text" default="#32baec" label="Default Module Link"
+                       description="" size="7"></field>
+                <field class="input-color" name="color44" type="text" default="#f5f5f5"
+                       label="Navigation Line Background" description="" size="7"></field>
+                <field class="input-color" name="color45" type="text" default="#ffffff"
+                       label="Slideshow Pagination Dot Background" description="" size="7"></field>
+                <field class="input-color" name="color46" type="text" default="#17a1d4"
+                       label="Slideshow Navigation Buttons" description="" size="7"></field>
+                <field class="input-color" name="color47" type="text" default="#32baec"
+                       label="Slideshow Active Navigation Buttons" description="" size="7"></field>
+
+                <field class="input-color" name="color48" type="text" default="#17a1d4" label="Slideshow Pagination Dot"
+                       description="" size="7"></field>
+                <field class="input-color" name="color49" type="text" default="#2f2f2f"
+                       label="Slideshow Thumbnail Border" description="" size="7"></field>
+                <field class="input-color" name="color50" type="text" default="#4c4c4c" label="Slideshow Caption"
+                       description="" size="7"></field>
+                <field class="input-color" name="color51" type="text" default="#ffffff"
+                       label="Responsive Slideshow Caption" description="" size="7"></field>
+                <field class="input-color" name="color52" type="text" default="#32baec"
+                       label="Slideshow Button Background" description="" size="7"></field>
+
+                <field class="input-color" name="color53" type="text" default="#17a1d4"
+                       label="Slideshow Active Button Background" description="" size="7"></field>
+                <field class="input-color" name="color54" type="text" default="#32baec" label="Top Menu Background"
+                       description="" size="7"></field>
+                <field class="input-color" name="color55" type="text" default="#ffffff" label="Top Menu Items Color"
+                       description="" size="7"></field>
+                <field class="input-color" name="color56" type="text" default="#32baec"
+                       label="Cart Panel/Currency Item Color" description="" size="7"></field>
+                <field class="input-color" name="color57" type="text" default="#dedede" label="Top Menu Sub Items Line"
+                       description="" size="7"></field>
+
+                <field class="input-color" name="color58" type="text" default="#595959" label="Top Menu Sub Items Color"
+                       description="" size="7"></field>
+                <field class="input-color" name="color59" type="text" default="#32baec" label="Cart Items/Link Color"
+                       description="" size="7"></field>
+                <field class="input-color" name="color60" type="text" default="#32baec"
+                       label="Currency Items Active Link Background" description="" size="7"></field>
+                <field class="input-color" name="color61" type="text" default="#ffffff"
+                       label="Currency Items Active Link Color" description="" size="7"></field>
+                <field class="input-color" name="color62" type="text" default="#32baec" label="Top Menu Items Active"
+                       description="" size="7"></field>
+
+                <field class="input-color" name="color64" type="text" default="#17a1d4"
+                       label="Top Menu Active Items Background" description="" size="7"></field>
+                <field class="input-color" name="color65" type="text" default="#ffffff"
+                       label="Top Menu Active Items Color" description="" size="7"></field>
+                <field class="input-color" name="color66" type="text" default="#ffffff"
+                       label="Top Menu Sub Items Handler Background" description="" size="7"></field>
+                <field class="input-color" name="color67" type="text" default="#ffffff"
+                       label="Top Menu Animated Arrow Border" description="" size="7"></field>
+
+                <field class="input-color" name="color68" type="text" default="#17a1d4"
+                       label="Top Menu Animated Arrow Background" description="" size="7"></field>
+                <field class="input-color" name="color69" type="text" default="#dedede" label="Default Borders"
+                       description="" size="7"></field>
+                <field class="input-color" name="color70" type="text" default="#32baec" label="Pop Up Price Background"
+                       description="" size="7"></field>
+                <field class="input-color" name="color71" type="text" default="#ffffff" label="Pop Up Price Color"
+                       description="" size="7"></field>
+                <field class="input-color" name="color72" type="text" default="#7d7d7d" label="Regular Product Price"
+                       description="" size="7"></field>
+
+                <field class="input-color" name="color73" type="text" default="#ffffff"
+                       label="Menu Module Heading Color" description="" size="7"></field>
+                <field class="input-color" name="color74" type="text" default="#32baec"
+                       label="Menu Module Heading Background" description="" size="7"></field>
+                <field class="input-color" name="color75" type="text" default="#fcfcfc"
+                       label="Menu Module Handler Background" description="" size="7"></field>
+                <field class="input-color" name="color76" type="text" default="#dedede"
+                       label="Menu Module Handler Border" description="" size="7"></field>
+                <field class="input-color" name="color77" type="text" default="#dfdfdf"
+                       label="Menu Module Seperator Line" description="" size="7"></field>
+
+                <field class="input-color" name="color78" type="text" default="#2b2b2b" label="Menu Module Link"
+                       description="" size="7"></field>
+                <field class="input-color" name="color79" type="text" default="#2b2b2b"
+                       label="Categories Menu Module Acitve Link" description="" size="7"></field>
+                <field class="input-color" name="color80" type="text" default="#32baec" label="Menu Module Active Link"
+                       description="" size="7"></field>
+                <field class="input-color" name="color81" type="text" default="#32baec"
+                       label="Module Style 1 Background" description="" size="7"></field>
+                <field class="input-color" name="color82" type="text" default="#ffffff" label="Module Style 1 Color"
+                       description="" size="7"></field>
+
+                <field class="input-color" name="color83" type="text" default="#ffffff" label="Module Style 1 Link"
+                       description="" size="7"></field>
+                <field class="input-color" name="color84" type="text" default="#17a1d4"
+                       label="Module Style 1 Active Background" description="" size="7"></field>
+                <field class="input-color" name="color85" type="text" default="#ffffff"
+                       label="Module Style 1 Active Color" description="" size="7"></field>
+                <field class="input-color" name="color86" type="text" default="#ffffff"
+                       label="Module Style 1 Active Link" description="" size="7"></field>
+                <field class="input-color" name="color87" type="text" default="#f2f2f2" label="Module Motion Background"
+                       description="" size="7"></field>
+
+                <field class="input-color" name="color88" type="text" default="#32baec" label="Module Heading 2nd Color"
+                       description="" size="7"></field>
+                <field class="input-color" name="color89" type="text" default="#f2f2f2"
+                       label="Custom Module Color 1 Background" description="" size="7"></field>
+                <field class="input-color" name="color90" type="text" default="#595959"
+                       label="Custom Module Color 1 Text" description="" size="7"></field>
+                <field class="input-color" name="color91" type="text" default="#383838"
+                       label="Custom Module Color 2 Background" description="" size="7"></field>
+                <field class="input-color" name="color92" type="text" default="#ffffff"
+                       label="Custom Module Color 2 Text" description="" size="7"></field>
+
+                <field class="input-color" name="color93" type="text" default="#454545" label="Bottom Area Separator"
+                       description="" size="7"></field>
+                <field class="input-color" name="color94" type="text" default="#383838" label="Footer Background"
+                       description="" size="7"></field>
+                <field class="input-color" name="color95" type="text" default="#878787" label="Footer Text"
+                       description="" size="7"></field>
+                <field class="input-color" name="color96" type="text" default="#bbbbbb" label="Footer Link"
+                       description="" size="7"></field>
+                <field class="input-color" name="color97" type="text" default="#ffffff" label="Footer Active Link"
+                       description="" size="7"></field>
+
+
+                <field type="spacer" class="inline-help" name="colours_handlers" label="If you are getting any troubles with the custom colors please at first make sure you set OFF for Built-in Theme option.
+				&lt;script type='text/javascript'&gt;
+				var myPickerSITENAME = new jscolor.color(document.getElementById('jform_params_sitenamecolor'), {hash:true, caps:false, pickerClosable:true});
+				var myPickerSLOGAN = new jscolor.color(document.getElementById('jform_params_slogancolor'), {hash:true, caps:false, pickerClosable:true});
+				var myPickerCAM1 = new jscolor.color(document.getElementById('jform_params_cam_loaderColor'), {hash:true, caps:false, pickerClosable:true});
+				var myPickerCAM2 = new jscolor.color(document.getElementById('jform_params_cam_loaderBgColor'), {hash:true, caps:false, pickerClosable:true});
+
+				var myPicker1 = new jscolor.color(document.getElementById('jform_params_color1'), {hash:true, caps:false, pickerClosable:true});
+				var myPicker2 = new jscolor.color(document.getElementById('jform_params_color2'), {hash:true, caps:false, pickerClosable:true});
+				var myPicker3 = new jscolor.color(document.getElementById('jform_params_color3'), {hash:true, caps:false, pickerClosable:true});
+				var myPicker4 = new jscolor.color(document.getElementById('jform_params_color4'), {hash:true, caps:false, pickerClosable:true});
+				var myPicker5 = new jscolor.color(document.getElementById('jform_params_color5'), {hash:true, caps:false, pickerClosable:true});
+				var myPicker6 = new jscolor.color(document.getElementById('jform_params_color6'), {hash:true, caps:false, pickerClosable:true});
+				var myPicker7 = new jscolor.color(document.getElementById('jform_params_color7'), {hash:true, caps:false, pickerClosable:true});
+				var myPicker8 = new jscolor.color(document.getElementById('jform_params_color8'), {hash:true, caps:false, pickerClosable:true});
+				var myPicker9 = new jscolor.color(document.getElementById('jform_params_color9'), {hash:true, caps:false, pickerClosable:true});
+
+				var myPicker10 = new jscolor.color(document.getElementById('jform_params_color10'), {hash:true, caps:false, pickerClosable:true});
+				var myPicker11 = new jscolor.color(document.getElementById('jform_params_color11'), {hash:true, caps:false, pickerClosable:true});
+				var myPicker12 = new jscolor.color(document.getElementById('jform_params_color12'), {hash:true, caps:false, pickerClosable:true});
+				var myPicker13 = new jscolor.color(document.getElementById('jform_params_color13'), {hash:true, caps:false, pickerClosable:true});
+				var myPicker14 = new jscolor.color(document.getElementById('jform_params_color14'), {hash:true, caps:false, pickerClosable:true});
+				var myPicker15 = new jscolor.color(document.getElementById('jform_params_color15'), {hash:true, caps:false, pickerClosable:true});
+				var myPicker16 = new jscolor.color(document.getElementById('jform_params_color16'), {hash:true, caps:false, pickerClosable:true});
+				var myPicker17 = new jscolor.color(document.getElementById('jform_params_color17'), {hash:true, caps:false, pickerClosable:true});
+				var myPicker18 = new jscolor.color(document.getElementById('jform_params_color18'), {hash:true, caps:false, pickerClosable:true});
+				var myPicker19 = new jscolor.color(document.getElementById('jform_params_color19'), {hash:true, caps:false, pickerClosable:true});
+				
+				var myPicker20 = new jscolor.color(document.getElementById('jform_params_color20'), {hash:true, caps:false, pickerClosable:true});
+				var myPicker21 = new jscolor.color(document.getElementById('jform_params_color21'), {hash:true, caps:false, pickerClosable:true});
+				var myPicker22 = new jscolor.color(document.getElementById('jform_params_color22'), {hash:true, caps:false, pickerClosable:true});
+				var myPicker23 = new jscolor.color(document.getElementById('jform_params_color23'), {hash:true, caps:false, pickerClosable:true});
+				var myPicker24 = new jscolor.color(document.getElementById('jform_params_color24'), {hash:true, caps:false, pickerClosable:true});
+				var myPicker25 = new jscolor.color(document.getElementById('jform_params_color25'), {hash:true, caps:false, pickerClosable:true});
+				var myPicker26 = new jscolor.color(document.getElementById('jform_params_color26'), {hash:true, caps:false, pickerClosable:true});
+				var myPicker27 = new jscolor.color(document.getElementById('jform_params_color27'), {hash:true, caps:false, pickerClosable:true});
+				var myPicker28 = new jscolor.color(document.getElementById('jform_params_color28'), {hash:true, caps:false, pickerClosable:true});
+				var myPicker29 = new jscolor.color(document.getElementById('jform_params_color29'), {hash:true, caps:false, pickerClosable:true});
+				
+				var myPicker30 = new jscolor.color(document.getElementById('jform_params_color30'), {hash:true, caps:false, pickerClosable:true});
+				var myPicker31 = new jscolor.color(document.getElementById('jform_params_color31'), {hash:true, caps:false, pickerClosable:true});
+				var myPicker31a = new jscolor.color(document.getElementById('jform_params_color31a'), {hash:true, caps:false, pickerClosable:true});
+				var myPicker32 = new jscolor.color(document.getElementById('jform_params_color32'), {hash:true, caps:false, pickerClosable:true});
+				var myPicker33 = new jscolor.color(document.getElementById('jform_params_color33'), {hash:true, caps:false, pickerClosable:true});
+				var myPicker34 = new jscolor.color(document.getElementById('jform_params_color34'), {hash:true, caps:false, pickerClosable:true});
+				var myPicker35 = new jscolor.color(document.getElementById('jform_params_color35'), {hash:true, caps:false, pickerClosable:true});
+				var myPicker36 = new jscolor.color(document.getElementById('jform_params_color36'), {hash:true, caps:false, pickerClosable:true});
+				var myPicker37 = new jscolor.color(document.getElementById('jform_params_color37'), {hash:true, caps:false, pickerClosable:true});
+				var myPicker38 = new jscolor.color(document.getElementById('jform_params_color38'), {hash:true, caps:false, pickerClosable:true});
+				var myPicker39 = new jscolor.color(document.getElementById('jform_params_color39'), {hash:true, caps:false, pickerClosable:true});
+				
+				var myPicker40 = new jscolor.color(document.getElementById('jform_params_color40'), {hash:true, caps:false, pickerClosable:true});
+				var myPicker41 = new jscolor.color(document.getElementById('jform_params_color41'), {hash:true, caps:false, pickerClosable:true});
+				var myPicker42 = new jscolor.color(document.getElementById('jform_params_color42'), {hash:true, caps:false, pickerClosable:true});
+				var myPicker43 = new jscolor.color(document.getElementById('jform_params_color43'), {hash:true, caps:false, pickerClosable:true});
+				var myPicker44 = new jscolor.color(document.getElementById('jform_params_color44'), {hash:true, caps:false, pickerClosable:true});
+				var myPicker45 = new jscolor.color(document.getElementById('jform_params_color45'), {hash:true, caps:false, pickerClosable:true});
+				var myPicker46 = new jscolor.color(document.getElementById('jform_params_color46'), {hash:true, caps:false, pickerClosable:true});
+				var myPicker47 = new jscolor.color(document.getElementById('jform_params_color47'), {hash:true, caps:false, pickerClosable:true});
+				var myPicker48 = new jscolor.color(document.getElementById('jform_params_color48'), {hash:true, caps:false, pickerClosable:true});
+				var myPicker49 = new jscolor.color(document.getElementById('jform_params_color49'), {hash:true, caps:false, pickerClosable:true});
+				
+				var myPicker50 = new jscolor.color(document.getElementById('jform_params_color50'), {hash:true, caps:false, pickerClosable:true});
+				var myPicker51 = new jscolor.color(document.getElementById('jform_params_color51'), {hash:true, caps:false, pickerClosable:true});
+				var myPicker52 = new jscolor.color(document.getElementById('jform_params_color52'), {hash:true, caps:false, pickerClosable:true});
+				var myPicker53 = new jscolor.color(document.getElementById('jform_params_color53'), {hash:true, caps:false, pickerClosable:true});
+				var myPicker54 = new jscolor.color(document.getElementById('jform_params_color54'), {hash:true, caps:false, pickerClosable:true});
+				var myPicker55 = new jscolor.color(document.getElementById('jform_params_color55'), {hash:true, caps:false, pickerClosable:true});
+				var myPicker56 = new jscolor.color(document.getElementById('jform_params_color56'), {hash:true, caps:false, pickerClosable:true});
+				var myPicker57 = new jscolor.color(document.getElementById('jform_params_color57'), {hash:true, caps:false, pickerClosable:true});
+				var myPicker58 = new jscolor.color(document.getElementById('jform_params_color58'), {hash:true, caps:false, pickerClosable:true});
+				var myPicker59 = new jscolor.color(document.getElementById('jform_params_color59'), {hash:true, caps:false, pickerClosable:true});
+				
+				var myPicker60 = new jscolor.color(document.getElementById('jform_params_color60'), {hash:true, caps:false, pickerClosable:true});
+				var myPicker61 = new jscolor.color(document.getElementById('jform_params_color61'), {hash:true, caps:false, pickerClosable:true});
+				var myPicker62 = new jscolor.color(document.getElementById('jform_params_color62'), {hash:true, caps:false, pickerClosable:true});
+				var myPicker64 = new jscolor.color(document.getElementById('jform_params_color64'), {hash:true, caps:false, pickerClosable:true});
+				var myPicker65 = new jscolor.color(document.getElementById('jform_params_color65'), {hash:true, caps:false, pickerClosable:true});
+				var myPicker66 = new jscolor.color(document.getElementById('jform_params_color66'), {hash:true, caps:false, pickerClosable:true});
+				var myPicker67 = new jscolor.color(document.getElementById('jform_params_color67'), {hash:true, caps:false, pickerClosable:true});
+				var myPicker68 = new jscolor.color(document.getElementById('jform_params_color68'), {hash:true, caps:false, pickerClosable:true});
+				var myPicker69 = new jscolor.color(document.getElementById('jform_params_color69'), {hash:true, caps:false, pickerClosable:true});
+				
+				var myPicker70 = new jscolor.color(document.getElementById('jform_params_color70'), {hash:true, caps:false, pickerClosable:true});
+				var myPicker71 = new jscolor.color(document.getElementById('jform_params_color71'), {hash:true, caps:false, pickerClosable:true});
+				var myPicker72 = new jscolor.color(document.getElementById('jform_params_color72'), {hash:true, caps:false, pickerClosable:true});
+				var myPicker73 = new jscolor.color(document.getElementById('jform_params_color73'), {hash:true, caps:false, pickerClosable:true});
+				var myPicker74 = new jscolor.color(document.getElementById('jform_params_color74'), {hash:true, caps:false, pickerClosable:true});
+				var myPicker75 = new jscolor.color(document.getElementById('jform_params_color75'), {hash:true, caps:false, pickerClosable:true});
+				var myPicker76 = new jscolor.color(document.getElementById('jform_params_color76'), {hash:true, caps:false, pickerClosable:true});
+				var myPicker77 = new jscolor.color(document.getElementById('jform_params_color77'), {hash:true, caps:false, pickerClosable:true});
+				var myPicker78 = new jscolor.color(document.getElementById('jform_params_color78'), {hash:true, caps:false, pickerClosable:true});
+				var myPicker79 = new jscolor.color(document.getElementById('jform_params_color79'), {hash:true, caps:false, pickerClosable:true});
+				
+				var myPicker80 = new jscolor.color(document.getElementById('jform_params_color80'), {hash:true, caps:false, pickerClosable:true});
+				var myPicker81 = new jscolor.color(document.getElementById('jform_params_color81'), {hash:true, caps:false, pickerClosable:true});
+				var myPicker82 = new jscolor.color(document.getElementById('jform_params_color82'), {hash:true, caps:false, pickerClosable:true});
+				var myPicker83 = new jscolor.color(document.getElementById('jform_params_color83'), {hash:true, caps:false, pickerClosable:true});
+				var myPicker84 = new jscolor.color(document.getElementById('jform_params_color84'), {hash:true, caps:false, pickerClosable:true});
+				var myPicker85 = new jscolor.color(document.getElementById('jform_params_color85'), {hash:true, caps:false, pickerClosable:true});
+				var myPicker86 = new jscolor.color(document.getElementById('jform_params_color86'), {hash:true, caps:false, pickerClosable:true});
+				var myPicker87 = new jscolor.color(document.getElementById('jform_params_color87'), {hash:true, caps:false, pickerClosable:true});
+				var myPicker88 = new jscolor.color(document.getElementById('jform_params_color88'), {hash:true, caps:false, pickerClosable:true});
+				var myPicker89 = new jscolor.color(document.getElementById('jform_params_color89'), {hash:true, caps:false, pickerClosable:true});
+				
+				var myPicker90 = new jscolor.color(document.getElementById('jform_params_color90'), {hash:true, caps:false, pickerClosable:true});
+				var myPicker91 = new jscolor.color(document.getElementById('jform_params_color91'), {hash:true, caps:false, pickerClosable:true});
+				var myPicker92 = new jscolor.color(document.getElementById('jform_params_color92'), {hash:true, caps:false, pickerClosable:true});
+				var myPicker93 = new jscolor.color(document.getElementById('jform_params_color93'), {hash:true, caps:false, pickerClosable:true});
+				var myPicker94 = new jscolor.color(document.getElementById('jform_params_color94'), {hash:true, caps:false, pickerClosable:true});
+				var myPicker95 = new jscolor.color(document.getElementById('jform_params_color95'), {hash:true, caps:false, pickerClosable:true});
+				var myPicker96 = new jscolor.color(document.getElementById('jform_params_color96'), {hash:true, caps:false, pickerClosable:true});
+				var myPicker97 = new jscolor.color(document.getElementById('jform_params_color97'), {hash:true, caps:false, pickerClosable:true});
+
+
+				&lt;/script&gt;"/>
+            </fieldset>
+
+        </fields>
+    </config>
+</extension>
+
+
+
+
+

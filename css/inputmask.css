@@ -1,0 +1,6 @@
+﻿div#MobOperator {height:35px;width:35px;background:url(../images/ua_mob_operator.jpg') no-repeat}
+div#MobOperator.live {background-position-y: -140px}
+div#MobOperator.Beeline {background-position-y:-105px}
+div#MobOperator.Utel{background-position-y: -35px}
+div#MobOperator.peoplenet{background-position-y:-175px}
+div#MobOperator.Jeans,div#MobOperator.mtc {background-position-y:-70px} 

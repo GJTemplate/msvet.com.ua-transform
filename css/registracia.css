@@ -1,0 +1,63 @@
+#registracia, .CONFIRM_BUTTON{ display:none;	}
+
+.CONFIRM_BUTTON {
+    float: right;
+    width: 49%;
+}
+ 
+div#cart_buttons {
+    width: 100%;
+}
+ 
+input#contShopRef {
+    width: 50% !important;
+    margin: 0 !important;
+}
+
+#conteynerCart {
+    /*min-width: 690px;*/
+}
+
+input.registracia-btn {
+    width: 50% !important;
+}
+
+@media only screen and (max-width: 480px) {
+	input#contShopRef {
+		width: 100% !important;
+		margin: 0 0 10px 0 !important;
+	}	
+	input.registracia-btn {
+		width: 100% !important;
+		float: left;
+    	text-align: left;
+	}
+	.keyControl {
+		height: auto;
+	}	
+	.CONFIRM_BUTTON {
+		float: right;
+		width: 100%;
+	}	
+	
+}
+
+@media only screen and (min-width: 481px) and (max-width: 600px) {
+	
+	input#contShopRef {
+		width: 100% !important;
+		margin: 0 0 10px 0 !important;
+	}	
+	input.registracia-btn {
+		width: 100% !important;
+		float: left;
+    	text-align: left;
+	}
+	.keyControl {
+		height: auto;
+	}	
+	.CONFIRM_BUTTON {
+		float: right;
+		width: 100%;
+	}	
+}

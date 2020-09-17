@@ -1,0 +1,336 @@
+
+.spacer .selectProperty {
+	margin: 3px auto;
+	}
+.addtocart-area .checkedProp .selectProperty {
+	margin: 5px auto;
+	} 	
+.selectProperty {
+	/* color: #0f8012; */
+	/* float: left; */
+	border: 1px solid #dedede;
+	/* margin-left: 5px; */
+	height: 15px;
+	width: 15px;
+	/* cursor: pointer; */
+	-webkit-border-radius: 50%;
+	-ms-border-radius: 50%;
+	-o-border-radius: 50%;
+	border-radius: 50%;
+	-webkit-box-shadow: inset 3px -2px 6px rgba(0, 0, 0, 0.44);
+	-moz-box-shadow: inset 3px -2px 6px rgba(0, 0, 0, 0.44);
+	box-shadow: inset 3px -2px 6px rgba(0, 0, 0, 0.44);
+	}
+
+.obj_selectorID_2 .wrapProperty {
+    border: 1px solid #ccc;
+    border-radius: 0;
+    width: auto;
+}
+
+.obj_selectorID_2 .selectProperty {border: none;background: none;box-shadow: none;font-weight: 600;text-align: center;}
+
+.Izgibi.selectProperty::after {content: 'ÃËœÃÂ·ÃÂ³ÃÂ¸ÃÂ±Ã‘â€¹';}
+
+.Izgibi.selectProperty {
+    width: 65px;
+}
+
+.Kvadrati.selectProperty::after {content: 'ÃÅ¡ÃÂ²ÃÂ°ÃÂ´Ã‘â‚¬ÃÂ°Ã‘â€šÃ‘â€¹';}
+
+.Kvadrati.selectProperty {
+    width: 85px;
+}
+
+.Net.selectProperty {
+    width: 35px;
+}
+
+.Abstraktsiya.selectProperty::after {content: 'ÃÂÃÂ±Ã‘ÂÃ‘â€šÃ‘â‚¬ÃÂ°ÃÂºÃ‘â€ ÃÂ¸Ã‘Â';}
+
+.Abstraktsiya.selectProperty {
+    width: 100px;
+    text-align: center;
+}
+
+.obj_selectorID_2 .Net.selectProperty::after {content: 'ÃÂÃÂµÃ‘â€š';}
+
+.zoloto.selectProperty {
+    background: #e9cf40;
+}
+
+.Hrom.selectProperty {
+    background: #e9eef2;
+}
+
+.cvetnaya.selectProperty {
+    background: rgba(218, 0, 255, 0.58);
+}
+
+
+.belyy.selectProperty,
+.belaya.selectProperty,
+.belye.selectProperty,
+.beloe.selectProperty {
+    background: #fff;
+}
+
+.siniy.selectProperty,
+.sinyaya.selectProperty,
+.sinie.selectProperty,
+.sinee.selectProperty {
+    background-color: #0c68d8;
+} 
+
+.zelenyy.selectProperty,
+.zelenaya.selectProperty,
+.zelenye.selectProperty,
+.zelenoe.selectProperty {
+    background: #49892d;
+}
+
+.krasnaya.selectProperty,
+.krasnyy.selectProperty,
+.krasnye.selectProperty,
+.krasnoe.selectProperty {
+	background: #c30d0d;
+	}
+	
+.oranzhevaya.selectProperty,
+.oranzhevyy.selectProperty,
+.oranzhevye.selectProperty,
+.oranzhevoe.selectProperty {
+	background: #ff6600;
+	}	
+
+.rozovaya.selectProperty,
+.rozovyy.selectProperty,
+.rozovye.selectProperty,
+.rozovoe.selectProperty {
+	background: #ff99b6;
+	}
+	
+.golubaya.selectProperty,
+.goluboy.selectProperty,
+.golubye.selectProperty,
+.goluboe.selectProperty {
+	background: #65b2f9;
+	}
+	
+.chernaya.selectProperty,
+.chernyy.selectProperty,
+.chernye.selectProperty,
+.chernoe.selectProperty {
+	background: #303030;
+	}
+		
+.seraya.selectProperty,
+.seryy.selectProperty,
+.serye.selectProperty,
+.seroe.selectProperty {
+	background: #ccc;
+	}
+		
+.zheltaya.selectProperty,
+.zheltyy.selectProperty,
+.zheltye.selectProperty,
+.zheltoe.selectProperty {
+	background: #f7f732;
+	}		
+	
+.korichnevaya.selectProperty,
+.korichnevyy.selectProperty,
+.korichnevye.selectProperty,
+.korichnevoe.selectProperty {
+	background: #964b00;
+	}
+	
+.wrapProperty {
+	/* border: 3px solid rgba(73, 137, 45, 0); */
+	height: 21px; 
+	/* width: 15px; *//* float: left; *//* border: 2px solid #fff; */
+	border-radius: 50%;
+	/* margin-left: 8px; *//* margin-top: 0; */
+	transition: all 0.3s;
+	cursor: pointer;
+	}
+
+.spacer:hover .wrapProperty {
+    /* margin-bottom: 25px; */
+    /* height: 15px; */
+    /* width: 15px; */
+}
+
+.spacer:hover .selectProperty {
+    width: 35px !important;
+}
+
+.spacer:hover .wrapProperty.checkedProp {
+    border: 2px solid #d44b17;
+    width: 41px;
+}
+.spacer:hover .wrapProperty {
+    /* height: auto; */
+    /* padding: 0px; */
+    height: 42px;
+    margin: 7px 0 0 0;
+}
+
+.spacer:hover .wrapProperty.checkedProp {
+    /* display: none; */
+    /* margin: 0; */
+    /* height: 40px; */
+}
+.wrapProperty.checkedProp {
+    border: 1px solid #49892d;
+    /* cursor: default; */
+    /* margin-top: 0px; */
+    /* margin-right: -9px; */
+    width: 23px;
+    height: 23px;
+    background: #fff;
+}
+
+.spacer:hover .wrapProperty.checkedProp {}
+
+.wrapProperty:hover:not(.checkedProp) {
+    border-color: #74d36b;
+    box-shadow: 48px 39px 43px -10px  #216105;
+    -webkit-animation: pulse 1.25s infinite cubic-bezier(0.06, 1, 0, 1);
+    -moz-animation: pulse 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+    -ms-animation: pulse 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+    animation: pulse 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+}
+@keyframes pulse {to {box-shadow: 0 0 0 15px rgba(232, 76, 61, 0);}}
+
+
+.productdetails-view .wrapProperty:hover:not(.checkedProp) {
+    border-color: #74d36b;
+    box-shadow: 0px 17px 43px -10px  #216105;
+    -webkit-animation: pulse_productdetails 1.25s infinite cubic-bezier(0.06, 1, 0, 1);
+    -moz-animation: pulse_productdetails 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+    -ms-animation: pulse_productdetails 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+    animation: pulse_productdetails 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+}
+@keyframes pulse_productdetails {to {box-shadow: 0 0 0 15px rgba(232, 76, 61, 0);}}
+
+
+.productdetails-view .product-field-type-C{}
+.productdetails-view .FiltersColoringWraper{
+    min-height: 20px;
+}
+
+
+.customSelect {
+    width: 100%;
+    float: left;
+}
+
+.wrapGrafFilters .filterRow {
+    /* width: 160px; */
+    /* float: left; */
+    position: absolute;
+    right: 60px;
+    top: 10px; 
+    z-index: 1000;
+}
+
+.filterRow .wrap_obj {
+    /* position: absolute; */
+    /* z-index: 500; */
+    /* top: -36px; */
+    /* width: 113% !important; */
+    /* left: -14px; */
+    /* margin: 0 auto; */
+    /* padding-left: 0px; */
+    /* height: 100px; */
+}
+
+.DefWrap .wrap_obj {
+    /* height: 10px; */
+}
+
+.FiltersColoringWraper .wrap_obj {
+    position: relative;
+    /* height: auto !important; */
+    width: 100%;
+    height: 40px;
+    /* border: 1px solid red; */
+    margin-top: 10px;
+}
+
+.spacer:hover .wrap_obj {
+    /* left: 6px; */
+    /* padding-top: 5px; */
+    /* height: 200px; */
+}
+
+.spacer:hover .wrap_obj .wrapProperty .selectProperty {
+    height: 35px;
+    width: 35px;
+}
+
+ 
+
+.spacer:hover .wrap_obj:before {content: 'Colors';font-size: 11px;color: #d45e17;text-shadow: 1px 1px 2px  rgba(0, 0, 0, 0.39);}
+
+.filter_0.filterRow:first-child {}
+
+span.vm-cmv-label, .vm-chzn-select.cvselection {
+    display: none;
+}
+
+.wrapGrafFilters {
+    /* position: relative; */
+    /* top: 0; */
+    /* z-index: 500; */
+    /* height: 200px; */
+    /* background: antiquewhite; */
+}
+.productdetails-view .product-field.product-field-type-C {
+    position: relative;
+    height: 10px;
+}
+.productdetails-view .product-field.product-field-type-C .filterRow{
+      float: left;
+      position: relative;
+}
+.productdetails-view .product-field.product-field-type-C .filterRow .wrapProperty{
+    float: left;
+    width: 40px;
+    margin-left: 7px;
+    height: 40px;
+}
+.productdetails-view .product-field.product-field-type-C .filterRow .wrapProperty.checkedProp{
+    height: 51px;
+    width: 51px;
+    padding-right: 1px;
+}
+.productdetails-view .product-field.product-field-type-C .filterRow .wrapProperty.checkedProp + .wrapProperty{
+    margin-left: 4px;
+}
+
+.productdetails-view .product-field-type-C .wrapProperty .selectProperty{
+    width: 40px;
+    height: 40px;
+}
+
+.product-field.product-field-type-C {
+    position: absolute;
+    right: -52px;
+    top: -2px;
+    /* width: 100px; */
+    /* border: 1px solid red; */
+    height: 100px;
+}
+.appCover .spacer:hover {
+    width: 170px;
+} 
+.appCover{
+    position: relative;
+}
+.appCover h3{
+    width: 100%;
+    padding: 0;
+    margin: 0 !important;
+}
