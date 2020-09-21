@@ -15,7 +15,7 @@
         <delite>
             <files>
                 <filename>a-b_test_analytics.php</filename>
-                <filename>analyticstracking.php</filename>
+<!--                <filename>analyticstracking.php</filename>-->
             </files>
         </delite>
     </preflight>
