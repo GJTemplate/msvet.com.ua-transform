@@ -176,6 +176,9 @@ class transformInstallerScript
         $this->minimum_version_gnz11 = (string)$parent->get('manifest')->version_gnz11;
         $this->VersionGnz11 = $this->getVersionGnz11();
 
+
+
+
         if (version_compare($this->VersionGnz11, $this->minimum_version_gnz11, '<'))
         {
             if (!$mute)
