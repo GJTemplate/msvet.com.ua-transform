@@ -126,8 +126,11 @@ class transformInstallerScript
         // manifest file version
         $this->release = (string)$parent->get('manifest')->version;
 
+        
+        echo'<pre>';print_r( $this->checkVersionGnz11($parent, true) );echo'</pre>'.__FILE__.' '.__LINE__;
+        
         die(__FILE__ .' '. __LINE__ );
-
+        
 
         # Проверить версию Gnz11
         if (!$this->checkVersionGnz11($parent, true))
