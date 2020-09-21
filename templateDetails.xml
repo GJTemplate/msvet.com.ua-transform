@@ -9,6 +9,15 @@
     <license>Commercial</license>
     <version>21.0.4</version>
     <description>21.0.3 transform</description>
+
+    <preflight>
+        <delite>
+            <files>
+                <filename>a-b_test_analytics.php</filename>
+            </files>
+        </delite>
+    </preflight>
+
     <files>
         <folder>css</folder>
         <folder>fonts</folder>
