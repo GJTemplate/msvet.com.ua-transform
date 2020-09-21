@@ -151,10 +151,7 @@
         <position>getresponse</position>
         <position>lustry-nedorogie</position>
     </positions>
-    <languages folder="language">
-        <language tag="en-GB">en-GB/en-GB.tpl_transform.ini</language>
-        <language tag="en-GB">en-GB/en-GB.tpl_transform.sys.ini</language>
-    </languages>
+
     <config>
         <fields name="params">
             <fieldset name="basics" label="TPL_transform_BASIC_SETTINGS_TAB">
