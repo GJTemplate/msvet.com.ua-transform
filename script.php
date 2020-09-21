@@ -126,10 +126,6 @@ class transformInstallerScript
         // manifest file version
         $this->release = (string)$parent->get('manifest')->version;
 
-
-
-        
-
         # Проверить версию Gnz11
         if (!$this->checkVersionGnz11($parent, true))
         {
@@ -139,8 +135,6 @@ class transformInstallerScript
                 return false;
             } #END IF
         } #END IF
-
-
 
         JLoader::registerNamespace('GNZ11', JPATH_LIBRARIES . '/GNZ11', $reset = false, $prepend = false, $type = 'psr4');
         \GNZ11\Extensions\ScriptFile::updateProcedure($typeExt, $parent);
@@ -166,6 +160,9 @@ class transformInstallerScript
 
     /**
      * Проверить версию библиотеки GNZ11
+     *
+     * В файле манифест должен быть тэг с версией бибилотеки
+     * <version_gnz11>0.5.1</version_gnz11>
      * @param $parent
      * @param bool $mute - Скрывать сообщения
      * @return bool
@@ -175,10 +172,6 @@ class transformInstallerScript
     {
         $this->minimum_version_gnz11 = (string)$parent->get('manifest')->version_gnz11;
         $this->VersionGnz11 = $this->getVersionGnz11();
-
-
-
-
         if (version_compare($this->VersionGnz11, $this->minimum_version_gnz11, '<'))
         {
 

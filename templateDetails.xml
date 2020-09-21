@@ -7,7 +7,7 @@
     <authorUrl>http://www.virtuemarttemplates.net</authorUrl>
     <copyright>http://virtuemarttemplates.net/terms-of-service.html</copyright>
     <license>Commercial</license>
-    <version>21.1.2</version>
+    <version>21.1.3</version>
     <description>21.0.3 transform</description>
 
     <!--                -->
@@ -17,6 +17,8 @@
             <files>
                 <filename>analyticstracking.php</filename>
                 <filename>a-b_test_analytics.php</filename>
+                <filename>language/en-GB/en-GB.tpl_transform.ini</filename>
+                <filename>language/en-GB/en-GB.tpl_transform.sys.ini</filename>
 
             </files>
         </delite>
@@ -157,6 +159,21 @@
         <fields name="params">
             <fieldset name="basics" label="TPL_transform_BASIC_SETTINGS_TAB">
                 <field type="spacer" class="inline-help" label="TPL_transform_WELCOME_LABEL"/>
+                
+                <field name="debug_on"
+                	type="radio"
+                	default="0"
+                	label="TEMPLATE_DETAILS_DEBUG_ON"
+                	description="TEMPLATE_DETAILS_DEBUG_ON_DESC"
+                	class="btn-group btn-group-yesno"
+                	showon=""
+                	>
+                	<option value="1">JYES</option>
+                	<option value="0">JNO</option>
+                </field>
+                
+                 
+                
                 <field name="contentfontsize" class="input-text" type="text" default="14px"
                        label="TPL_transform_CONTENTFONTSIZE_LABEL" description="TPL_transform_CONTENTFONTSIZE_DESC"
                        size="10"/>

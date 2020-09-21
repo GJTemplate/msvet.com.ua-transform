@@ -50,13 +50,10 @@ a:hover{text-decoration:underline;}
 	width: 0;
 	padding: 0;
 }
+
 #main-content-handler{
 	padding:0px 0px 10px 0px;
 	margin-bottom:10px;
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-    -o-user-select: none;
 }
 .tmp-content-area{padding-bottom:10px;}
 #tab-modules{padding:0px 0px 20px 0px;}

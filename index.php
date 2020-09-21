@@ -17,7 +17,15 @@ JHtml::_('behavior.framework', true);
 JHtml::_('bootstrap.framework');
 $doc = JFactory::getDocument();
 
-	$doc = JFactory::getDocument();
+$doc->addStyleDeclaration('
+#main-content-handler{
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+}
+') ; 
+
 	$headData = $doc->getHeadData();
 	  unset ( $headData['scripts']['/media/jui/js/jquery-noconflict.js'] )  ;
 	  unset ( $headData['styleSheets']['/components/com_virtuemart/assets/css/facebox.css?vmver='.VM_REV] )  ; 			
@@ -65,27 +73,8 @@ endif;
     $current_menu = $menu->getActive();
 //	$menu_compnt = $current_menu->component;
 
-	
-	if( isset( $current_menu->id ) )
-	{
-		$menu_id = $current_menu->id;
-		$arrId   = [ 3040 , 3041 , 2605 , 3042 ];
-		if( in_array( $menu_id , $arrId ) )
-		{
-			try
-			{
-				// Code that may throw an Exception or Error.
-				// include_once( "a-b_test_analytics.php" );
-			}
-			catch( Throwable $e )
-			{
-				// Executed only in PHP 7, will not match in PHP 5
-				echo 'Выброшено исключение: ' , $e->getMessage() , "\n";
-				echo '<pre>'; print_r( $e ); echo '</pre>' . __FILE__ . ' ' . __LINE__;
-				die( __FILE__ . ' ' . __LINE__ );
-			}
-		}#END IF
-	}#END IF
+
+
 	
 ?> 	
 <!-- END A-B-Test Menu_ID <?php echo $menu_id; ?> -->	
