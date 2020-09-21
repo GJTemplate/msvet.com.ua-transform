@@ -126,7 +126,7 @@ class transformInstallerScript
         // manifest file version
         $this->release = (string)$parent->get('manifest')->version;
 
-        
+
 
         
 
