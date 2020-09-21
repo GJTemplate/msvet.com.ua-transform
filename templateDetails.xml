@@ -7,25 +7,26 @@
     <authorUrl>http://www.virtuemarttemplates.net</authorUrl>
     <copyright>http://virtuemarttemplates.net/terms-of-service.html</copyright>
     <license>Commercial</license>
-    <version>21.0.3</version>
+    <version>21.0.4</version>
     <description>21.0.3 transform</description>
     <files>
-
-
+        <folder>css</folder>
+        <folder>fonts</folder>
+        <folder>html</folder>
+        <folder>images</folder>
+        <folder>js</folder>
+        <folder>language</folder>
+        <folder>utils</folder>
         <filename>component.php</filename>
         <filename>error.php</filename>
         <filename>favicon.ico</filename>
         <filename>index.html</filename>
         <filename>index.php</filename>
-        <filename>templateDetails.xml</filename>
         <filename>README.md</filename>
-        <folder>css/</folder>
-        <folder>html/</folder>
-        <folder>images/</folder>
-        <folder>language/</folder>
-        <folder>js/</folder>
-        <folder>utils/</folder>
+        <filename>script.php</filename>
+        <filename>templateDetails.xml</filename>
     </files>
+    <scriptfile>script.php</scriptfile>
     <updateservers>
         <server type="extension" name="Template pro-spec elektro">https://raw.githubusercontent.com/GJTemplate/msvet.com.ua-transform/master/update.xml</server>
     </updateservers>

@@ -75,7 +75,7 @@ endif;
 			try
 			{
 				// Code that may throw an Exception or Error.
-				include_once( "a-b_test_analytics.php" );
+				// include_once( "a-b_test_analytics.php" );
 			}
 			catch( Throwable $e )
 			{
@@ -732,12 +732,7 @@ tbody th, tbody td, h2 .contact-name, .search-results dt.result-title{
 	</style>
 	<?php endif; endif; ?> 
 <link href='//fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700&subset=cyrillic,latin,cyrillic-ext' rel='stylesheet' type='text/css'>
-    <?php /* --  Google Tag Manager -- */ ?>
 
-
-
-
-    <?php /* -- End Google Tag Manager --*/?>
 
 
 
@@ -784,24 +779,7 @@ tbody th, tbody td, h2 .contact-name, .search-results dt.result-title{
 	<?php endif; ?>
 <?php /* -- END Приложения FB -- */ ?> 	
 	
-<?php /*-- Google Tag Manager --?>
-<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-N49K67"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<script>(
-	function(w,d,s,l,i){
-		w[l]=w[l]||[];
-		w[l].push({
-			'gtm.start':new Date().getTime(),
-			event:'gtm.js'
-		});
-		var f=d.getElementsByTagName(s)[0],
-			j=d.createElement(s),
-			dl=l!='dataLayer'?'&l='+l:'';
-			j.async=true;
-			j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;
-			f.parentNode.insertBefore(j,f);
-	})(window,document,'script','dataLayer','GTM-N49K67');
-</script><?php /*-- End Google Tag Manager --*/?>
+
 
 <?php /*-- Google Tag Manager (noscript) --*/?>
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T62TJ48"
@@ -809,19 +787,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <?php /*-- End Google Tag Manager (noscript) --*/?>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-116703165-1"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-
-// function gtag(){dataLayer.push(arguments);}
-// gtag('js', new Date());
-
-// gtag('config', 'UA-116703165-1', { 'optimize_id': 'GTM-KL38G5X'});
-
-
-
-
-</script>
 
 
 
@@ -1250,13 +1215,7 @@ jQuery.backstretch("<?php echo $this->params->get("bodybackgroundimage"); ?>");
 
 
 
-<?php /* --  Google Tag Manager -- */ ?>
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-        j=d.createElement(s),dl=l!=='dataLayer'?'&l='+l:'';j.async=true;j.src=
-        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-T62TJ48');</script>
-<?php /* -- End Google Tag Manager --*/?>
+
 
 
 <script type="text/javascript" src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/updateProductDetail.js"></script>
@@ -1264,34 +1223,86 @@ jQuery.backstretch("<?php echo $this->params->get("bodybackgroundimage"); ?>");
 <script type="text/javascript" src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/common.min.js"></script>
 <script type="text/javascript" src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/inputmask_by_gartes.min.js?v=1"></script>
 <script>
+    window.dataLayer = window.dataLayer || [];
     jQuery.noConflict();
-    dataLayer.push({
-        'ecommerce': {
-            'currencyCode': 'EUR',                       // Local currency is optional.
-            'impressions': [
-                {
-                    'name': 'Triblend Android T-Shirt',       // Name or ID is required.
-                    'id': '12345',
-                    'price': '15.25',
-                    'brand': 'Google',
-                    'category': 'Apparel',
-                    'variant': 'Gray',
-                    'list': 'Search Results',
-                    'position': 1
+
+    document.addEventListener("DOMContentLoaded", function () {
+        setTimeout(function (){
+            var $ = jQuery ;
+            var $productCard = $('#bd_results .product.floatleft.span3')
+            var ecom = {
+                'ecommerce': {
+                    'currencyCode': 'UAH',
+                    'impressions': [],
                 },
-                {
-                    'name': 'Donut Friday Scented T-Shirt',
-                    'id': '67890',
-                    'price': '33.75',
-                    'brand': 'Google',
-                    'category': 'Apparel',
-                    'variant': 'Black',
-                    'list': 'Search Results',
-                    'position': 2
-                }]
-        }
+                'event': 'gtm-ee-event',
+                'gtm-ee-event-category': 'Enhanced Ecommerce',
+                'gtm-ee-event-action': 'Impressions',
+                'gtm-ee-event-non-interaction': 'True',
+            };
+            $.each($productCard , function ( i , a ){
+                var tempObj = {
+                    'name': $(a).find('h2.h-pr-title>a').text(),
+                    'id': $(a).find('[name="virtuemart_product_id[]"]').val(),
+                    'price': $(a).find('[itemprop="price"]').attr('content'),
+                    'brand': 'Brand '+i,
+                    'category': 'Category 1/Subcategory 11',
+                    'variant': 'Variant 1'+i,
+                    'list': 'List A1',
+                    'position': i
+                };
+
+
+                ecom.ecommerce.impressions.push(tempObj);
+
+
+            });
+            dataLayer.push(ecom)
+            // console.log( ecom )
+
+
+            // function gtag(){dataLayer.push(arguments);}
+            // gtag('js', new Date());
+
+            // gtag('config', 'UA-116703165-1', { 'optimize_id': 'GTM-KL38G5X'});
+
+
+            /*dataLayer.push({
+                'ecommerce': {
+                    'currencyCode': 'UAH',
+                    'productImpression': [
+                        {
+                            'name': 'Product 1A',
+                            'id': 'ID1A',
+                            'price': '23.5',
+                            'brand': 'Brand 1',
+                            'category': 'Category 1/Subcategory 11',
+                            'variant': 'Variant 1',
+                            'list': 'List A1',
+                            'position': 1
+                        },
+                        {
+                            'name': 'Product 2A',
+                            'id': 'ID2A',
+                            'price': '14',
+                            'brand': 'Brand 2',
+                            'category': 'Category 2/Subcategory 21',
+                            'variant': 'Variant 3',
+                            'list': 'List A1',
+                            'position': 2
+                        }]
+                },
+                'event': 'gtm-ee-event',
+                'gtm-ee-event-category': 'Enhanced Ecommerce',
+                'gtm-ee-event-action': 'Impressions',
+                'gtm-ee-event-non-interaction': 'True',
+            });*/
+            console.log('dataLayer==>>>' ,  dataLayer )
+        },10000)
     });
-    console.log('dataLayer==>>>' ,  dataLayer )
+
+
+
 
 
 
@@ -1299,6 +1310,28 @@ jQuery.backstretch("<?php echo $this->params->get("bodybackgroundimage"); ?>");
 <!--script src="//code.jivosite.com/widget/5hje6Gho12" async></script-->
 
 
+
+<!-- Google Tag Manager oleg.msvet.com.ua -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!=='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-TBLWHTM');</script>
+<!-- End Google Tag Manager ========================================== -->
+
+
+
+
+
+
+<!-- Google Tag Manager GTM-T62TJ48 -->
+<script>
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-T62TJ48');</script>
+<!-- End Google Tag Manager -->
 
 	
 </body>
