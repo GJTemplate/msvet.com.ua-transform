@@ -10,12 +10,13 @@
     <version>21.0.7</version>
     <description>21.0.3 transform</description>
 
+    <!--                <filename>analyticstracking.php</filename>-->
     <version_gnz11>0.4.9</version_gnz11>
     <preflight>
         <delite>
             <files>
                 <filename>a-b_test_analytics.php</filename>
-<!--                <filename>analyticstracking.php</filename>-->
+
             </files>
         </delite>
     </preflight>
