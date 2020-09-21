@@ -181,16 +181,15 @@ class transformInstallerScript
 
         if (version_compare($this->VersionGnz11, $this->minimum_version_gnz11, '<'))
         {
+
             if (!$mute)
             {
                 $ErrorMsg = 'Необходимая минимальная версия библиотеи GNZ11 <b>' . $this->minimum_version_gnz11 . '</b>' . PHP_EOL;
                 $ErrorMsg .= 'Установленная версия <b>' . $this->VersionGnz11 . '</b>';
+                # Выдать сообщение об ошибке и вернуть false
+                # Throw some error message and return false
+                $this->app->enqueueMessage($ErrorMsg, 'error');
             }#END IF
-
-
-            # Выдать сообщение об ошибке и вернуть false
-            # Throw some error message and return false
-            $this->app->enqueueMessage($ErrorMsg, 'error');
             return false;
         }
         if (!$mute)
