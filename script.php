@@ -127,9 +127,7 @@ class transformInstallerScript
         $this->release = (string)$parent->get('manifest')->version;
 
         
-        echo'<pre>';print_r( $this->checkVersionGnz11($parent, true) );echo'</pre>'.__FILE__.' '.__LINE__;
-        
-        die(__FILE__ .' '. __LINE__ );
+
         
 
         # Проверить версию Gnz11
@@ -142,6 +140,10 @@ class transformInstallerScript
             } #END IF
         } #END IF
 
+        echo'<pre>';print_r( $result );echo'</pre>'.__FILE__.' '.__LINE__;
+        echo'<pre>';print_r( $this->checkVersionGnz11($parent, true) );echo'</pre>'.__FILE__.' '.__LINE__;
+
+        die(__FILE__ .' '. __LINE__ );
 
         JLoader::registerNamespace('GNZ11', JPATH_LIBRARIES . '/GNZ11', $reset = false, $prepend = false, $type = 'psr4');
         \GNZ11\Extensions\ScriptFile::updateProcedure($typeExt, $parent);
