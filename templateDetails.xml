@@ -7,15 +7,16 @@
     <authorUrl>http://www.virtuemarttemplates.net</authorUrl>
     <copyright>http://virtuemarttemplates.net/terms-of-service.html</copyright>
     <license>Commercial</license>
-    <version>21.1.0</version>
+    <version>21.1.1</version>
     <description>21.0.3 transform</description>
 
-    <!--       <filename>a-b_test_analytics.php</filename>         -->
+    <!--                -->
     <version_gnz11>0.5.1</version_gnz11>
     <preflight>
         <delite>
             <files>
                 <filename>analyticstracking.php</filename>
+                <filename>a-b_test_analytics.php</filename>
 
             </files>
         </delite>
