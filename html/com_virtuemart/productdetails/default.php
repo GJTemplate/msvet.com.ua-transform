@@ -100,11 +100,31 @@ if(!empty($boxFuncAsk) or !empty($boxFuncReco)){
 // This is the rows for the customfields, as long you have only one product, just increase it by one,
 // if you have more than one product, reset it for every product
 $this->row = 0;
+
+$app    = \Joomla\CMS\Factory::getApplication();
+$pathway = $app->getPathway();
+$pathwayNames = $pathway->getPathwayNames() ;
+$pathwayNamesCount = ( count( $pathwayNames ) - 1 ) ;
+unset($pathwayNames[0]) ; 
+unset($pathwayNames[$pathwayNamesCount]) ;
+$pathwayText = implode('/' , $pathwayNames );
+
+
+
+
 ?>
 
 <div class="productdetails-view productdetails" itemscope itemtype="http://schema.org/Product">
-<h1 class="product_ttl" itemprop="name"><?php echo $this->product->product_name ?></h1>
-	<div><?php echo $this->edit_link; ?></div>
+    <div class="product-category" style="display: none">
+        <?= $pathwayText ?>
+    </div>
+
+    <h1 class="product_ttl" itemprop="name">
+        <?= $this->product->product_name ?>
+    </h1>
+	<div>
+        <?php echo $this->edit_link; ?>
+    </div>
 	<div class="row-fluid">
     	<div class="span5">
         

@@ -1,4 +1,9 @@
-﻿<?php defined( '_JEXEC' ) or die; ?>
+﻿<?php defined( '_JEXEC' ) or die;
+
+JLoader::registerNamespace( 'GNZ11' , JPATH_LIBRARIES . '/GNZ11' , $reset = false , $prepend = false , $type = 'psr4' );
+$GNZ11_js =  \GNZ11\Core\Js::instance();
+
+?>
 <?php if( $this->countModules('mod-home-2')) : ?>
 	<?php 
 		$timer_date = '16-07-2018';	// день/месяц/год
@@ -17,21 +22,32 @@ JHtml::_('behavior.framework', true);
 JHtml::_('bootstrap.framework');
 $doc = JFactory::getDocument();
 
-$doc->addStyleDeclaration('
-#main-content-handler{
-	-moz-user-select: none;
-	-webkit-user-select: none;
-	-ms-user-select: none;
-	-o-user-select: none;
-}
-') ; 
+$menu = \Joomla\CMS\Factory::getApplication()->getMenu();
+$current_menu = $menu->getActive();
+
+/**
+ * Если включена отладка шаблона - разрешить выделение текста на странице
+ */
+if ( !$this->params->get("debug_on") )
+{
+
+    $doc->addStyleDeclaration('
+        #main-content-handler{
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+            -o-user-select: none;
+        }
+    ') ;
+}#END IF
+
+
 
 	$headData = $doc->getHeadData();
 	  unset ( $headData['scripts']['/media/jui/js/jquery-noconflict.js'] )  ;
 	  unset ( $headData['styleSheets']['/components/com_virtuemart/assets/css/facebox.css?vmver='.VM_REV] )  ; 			
 	$doc->setHeadData($headData); 
-	$v = 'if (typeof Virtuemart === "undefined")
-	Virtuemart = {};';
+	$v = 'if (typeof Virtuemart === "undefined") Virtuemart = {};';
 			$v .= "Virtuemart.vmSiteurl = vmSiteurl = '".JURI::root()."' ;\n";
 			$v .= 'Virtuemart.vmLang = vmLang = "&lang='.VmConfig::$vmlangSef.'";'."\n";
 			$v .= 'Virtuemart.vmLangTag = vmLangTag = "'.VmConfig::$vmlangSef.'";'."\n";
@@ -69,15 +85,14 @@ endif;
 <!-- A-B-Test -->
 <?php
 	
-    $menu = JFactory::getApplication()->getMenu();
-    $current_menu = $menu->getActive();
-//	$menu_compnt = $current_menu->component;
+
+
 
 
 
 	
 ?> 	
-<!-- END A-B-Test Menu_ID <?php echo $menu_id; ?> -->	
+
 	
 	<jdoc:include type="head" />
 <!--[if lt IE 9]>
@@ -93,12 +108,19 @@ endif;
     <link rel="stylesheet" type="text/css" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/css/registracia.css" media="screen" />
 
 	<script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/selectnav.min.js"></script>
-<!--[if IE 6]> <link rel="stylesheet" type="text/css" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/css/ie6.css" media="screen" /> <![endif]-->
-<!--[if IE 7]> <link rel="stylesheet" type="text/css" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/css/ie.css" media="screen" /> <![endif]-->
-    <?php if($this->params->get('usetheme')==true) : ?>
+    <!--[if IE 6]> <link rel="stylesheet" type="text/css" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/css/ie6.css" media="screen" /> <![endif]-->
+    <!--[if IE 7]> <link rel="stylesheet" type="text/css" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/css/ie.css" media="screen" /> <![endif]-->
+
+    <?php
+    if($this->params->get('usetheme')==true) : ?>
     <link rel="stylesheet" type="text/css" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/css/presets/<?php echo $this->params->get('choosetheme'); ?>.css" media="screen" />
-    <?php endif; ?>
-	<?php if($this->params->get("usedropdown")) : ?> 
+    <?php
+    endif; ?>
+
+
+	<?php
+
+    if($this->params->get("usedropdown")) : ?>
 	<script type="text/javascript" src="<?php echo $this->baseurl; ?>/templates/<?php echo $this->template ?>/js/superfish.js"></script>
 	<script type="text/javascript" src="<?php echo $this->baseurl; ?>/templates/<?php echo $this->template ?>/js/supersubs.js"></script>
 	<script type="text/javascript">
@@ -108,7 +130,8 @@ endif;
             extraWidth:  1
         }).superfish({ 
             delay:500,
-            animation:{opacity:'<?php if($this->params->get("dropopacity")) : ?>show<?php else: ?>hide<?php endif; ?>',height:'<?php if($this->params->get("dropheight")) : ?>show<?php else: ?>hide<?php endif; ?>',width:'<?php if($this->params->get("dropwidth")): ?>show<?php else: ?>hide<?php endif; ?>'},
+            animation:{
+                opacity:'<?php if($this->params->get("dropopacity")) : ?>show<?php else: ?>hide<?php endif; ?>',height:'<?php if($this->params->get("dropheight")) : ?>show<?php else: ?>hide<?php endif; ?>',width:'<?php if($this->params->get("dropwidth")): ?>show<?php else: ?>hide<?php endif; ?>'},
             speed:'<?php echo $this->params->get("dropspeed"); ?>',
             autoArrows:true,
             dropShadows:false 
@@ -121,8 +144,13 @@ endif;
 		});
 	});
 	</script>
-	<?php endif; ?>
-	<?php if( $this->countModules('position-1')) : ?>
+
+	<?php
+    endif; ?>
+
+
+	<?php
+    if( $this->countModules('position-1')) : ?>
 	<script type="text/javascript">
 	jQuery(document).ready(function() {
 		jQuery('#menupanel').on('click', function() {
@@ -141,7 +169,10 @@ endif;
 		});
 	});
 	</script>
-	<?php endif; ?>
+	<?php
+    endif; ?>
+
+
 	<?php echo $this->params->get("headcode"); ?>
 	<?php if( $this->countModules('currency')) : ?>
 	<script type="text/javascript" src="<?php echo $this->baseurl; ?>/templates/<?php echo $this->template ?>/js/jquery.dropkick-1.0.0.js"></script>
@@ -202,7 +233,15 @@ endif;
 		</script>
 	<?php endif; ?>
 	<!-- End of Built-in Slideshow -->
-	<?php endif; ?>
+	<?php
+    endif;
+
+
+
+
+
+
+    ?>
 	
     <style type="text/css">
 	<?php if($this->params->get("useresponsivemode") == false ) : ?>
@@ -215,6 +254,9 @@ endif;
 	.selectnav {display:none;}#log-panel .button1{display:none;}
 	.category-view .row-fluid .category img{width:100%;}
 	<?php endif; ?>
+
+
+
 	body {font-size: <?php echo $this->params->get('contentfontsize'); ?>;}
 	#site-name-handler, #search-position{height:<?php echo $this->params->get('topheight'); ?>px; }
 	#sn-position h1{<?php if ($this->direction == 'rtl') : ?>right<?php else: ?>left<?php endif; ?>:<?php echo $this->params->get('H1TitlePositionX'); ?>px;top:<?php echo $this->params->get('H1TitlePositionY'); ?>px;color:<?php echo $this->params->get('sitenamecolor'); ?>;font-size:<?php echo $this->params->get('sitenamefontsize'); ?>;}
@@ -272,12 +314,10 @@ body {
 	background-color: <?php echo $this->params->get("color1"); ?>;
 	color: <?php echo $this->params->get("color2"); ?>;
 }
-
 .custom-color1{color: <?php echo $this->params->get("color3"); ?>;}
 .custom-color2{color: <?php echo $this->params->get("color4"); ?>;}
 .custom-color3{color: <?php echo $this->params->get("color5"); ?>;}
 .custom-color4{color: <?php echo $this->params->get("color6"); ?>;}
-
 #top-quick-nav {
 	background-color: <?php echo $this->params->get("color7"); ?>;
 	border-bottom: 1px solid <?php echo $this->params->get("color8"); ?>;
@@ -610,7 +650,15 @@ tbody th, tbody td, h2 .contact-name, .search-results dt.result-title{
 }
 <?php endif; ?>
 </style>
-<?php if( $this->countModules('top-1 or top-2 or top-3 or top-4 or top-5 or top-6')) : 
+
+
+
+
+
+
+<?php
+
+if( $this->countModules('top-1 or top-2 or top-3 or top-4 or top-5 or top-6')) :
 	if( $this->countModules('top-1') ) $a[0] = 0;
 	if( $this->countModules('top-2') ) $a[1] = 1;
 	if( $this->countModules('top-3') ) $a[2] = 2;
@@ -626,7 +674,8 @@ tbody th, tbody td, h2 .contact-name, .search-results dt.result-title{
 	if ($topmodules1 == 6) $tm1class = "span2";
 	endif; 
 	
-	if( $this->countModules('top-7 or top-8 or top-9 or top-10 or top-11 or top-12')) : 
+
+	if( $this->countModules('top-7 or top-8 or top-9 or top-10 or top-11 or top-12')) :
 	if( $this->countModules('top-7') ) $b[0] = 0;
 	if( $this->countModules('top-8') ) $b[1] = 1;
 	if( $this->countModules('top-9') ) $b[2] = 2;
@@ -1084,14 +1133,31 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         
                         
 						<?php if( $this->countModules('bottom-a or bottom-b or bottom-c or bottom-d')) : ?>
-						<div id="bottom-content-modules">
-							<div class="row-fluid">
-								<?php if( $this->countModules('bottom-a')) : ?><div class="<?php echo $bmaclass; ?>"><jdoc:include type="modules" name="bottom-a" style="vmdefault" /></div><?php endif; ?>
-								<?php if( $this->countModules('bottom-b')) : ?><div class="<?php echo $bmaclass; ?>"><jdoc:include type="modules" name="bottom-b" style="vmdefault" /></div><?php endif; ?>
-								<?php if( $this->countModules('bottom-c')) : ?><div class="<?php echo $bmaclass; ?>"><jdoc:include type="modules" name="bottom-c" style="vmdefault" /></div><?php endif; ?>
-								<?php if( $this->countModules('bottom-d')) : ?><div class="<?php echo $bmaclass; ?>"><jdoc:include type="modules" name="bottom-d" style="vmdefault" /></div><?php endif; ?>
-							</div>	
-						</div>
+                            <div id="bottom-content-modules">
+                                <div class="row-fluid">
+
+                                    <?php if ($this->countModules('bottom-a')) : ?>
+                                    <div class="<?php echo $bmaclass; ?>">
+                                            <jdoc:include type="modules" name="bottom-a" style="vmdefault"/>
+                                        </div><?php endif; ?>
+
+                                    <?php if ($this->countModules('bottom-b')) : ?>
+                                        <div class="<?php echo $bmaclass; ?>">
+                                            <jdoc:include type="modules" name="bottom-b" style="vmdefault"/>
+                                        </div><?php endif; ?>
+
+                                    <?php if ($this->countModules('bottom-c')) : ?>
+                                        <div class="<?php echo $bmaclass; ?>">
+                                            <jdoc:include type="modules" name="bottom-c" style="vmdefault"/>
+                                        </div><?php endif; ?>
+
+                                    <?php if ($this->countModules('bottom-d')) : ?>
+                                        <div class="<?php echo $bmaclass; ?>">
+                                            <jdoc:include type="modules" name="bottom-d" style="vmdefault"/>
+                                        </div><?php endif; ?>
+
+                                </div>
+                            </div>
 						<?php endif; ?>
 					</div>
 					<?php if( $this->countModules('top-right-1 or top-right-2 or position-6 or bottom-right-1 or bottom-right-2')) : ?>
@@ -1211,116 +1277,9 @@ jQuery.backstretch("<?php echo $this->params->get("bodybackgroundimage"); ?>");
 <script type="text/javascript" src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/registracia.js"></script>
 <script type="text/javascript" src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/common.min.js"></script>
 <script type="text/javascript" src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/inputmask_by_gartes.min.js?v=1"></script>
-<script>
-    window.dataLayer = window.dataLayer || [];
-    jQuery.noConflict();
-
-    document.addEventListener("DOMContentLoaded", function () {
-        setTimeout(function (){
-            var $ = jQuery ;
-            var $productCard = $('#bd_results .product.floatleft.span3')
-            var ecom = {
-                'ecommerce': {
-                    'currencyCode': 'UAH',
-                    'impressions': [],
-                },
-                'event': 'gtm-ee-event',
-                'gtm-ee-event-category': 'Enhanced Ecommerce',
-                'gtm-ee-event-action': 'Impressions',
-                'gtm-ee-event-non-interaction': 'True',
-            };
-            $.each($productCard , function ( i , a ){
-                var tempObj = {
-                    'name': $(a).find('h2.h-pr-title>a').text(),
-                    'id': $(a).find('[name="virtuemart_product_id[]"]').val(),
-                    'price': $(a).find('[itemprop="price"]').attr('content'),
-                    'brand': 'Brand '+i,
-                    'category': 'Category 1/Subcategory 11',
-                    'variant': 'Variant 1'+i,
-                    'list': 'List A1',
-                    'position': i
-                };
+<script> jQuery.noConflict();</script>
 
 
-                ecom.ecommerce.impressions.push(tempObj);
-
-
-            });
-            dataLayer.push(ecom)
-            // console.log( ecom )
-
-
-            // function gtag(){dataLayer.push(arguments);}
-            // gtag('js', new Date());
-
-            // gtag('config', 'UA-116703165-1', { 'optimize_id': 'GTM-KL38G5X'});
-
-
-            /*dataLayer.push({
-                'ecommerce': {
-                    'currencyCode': 'UAH',
-                    'productImpression': [
-                        {
-                            'name': 'Product 1A',
-                            'id': 'ID1A',
-                            'price': '23.5',
-                            'brand': 'Brand 1',
-                            'category': 'Category 1/Subcategory 11',
-                            'variant': 'Variant 1',
-                            'list': 'List A1',
-                            'position': 1
-                        },
-                        {
-                            'name': 'Product 2A',
-                            'id': 'ID2A',
-                            'price': '14',
-                            'brand': 'Brand 2',
-                            'category': 'Category 2/Subcategory 21',
-                            'variant': 'Variant 3',
-                            'list': 'List A1',
-                            'position': 2
-                        }]
-                },
-                'event': 'gtm-ee-event',
-                'gtm-ee-event-category': 'Enhanced Ecommerce',
-                'gtm-ee-event-action': 'Impressions',
-                'gtm-ee-event-non-interaction': 'True',
-            });*/
-            console.log('dataLayer==>>>' ,  dataLayer )
-        },10000)
-    });
-
-
-
-
-
-
-</script>
-<!--script src="//code.jivosite.com/widget/5hje6Gho12" async></script-->
-
-
-
-<!-- Google Tag Manager oleg.msvet.com.ua -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-        j=d.createElement(s),dl=l!=='dataLayer'?'&l='+l:'';j.async=true;j.src=
-        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-TBLWHTM');</script>
-<!-- End Google Tag Manager ========================================== -->
-
-
-
-
-
-
-<!-- Google Tag Manager GTM-T62TJ48 -->
-<script>
-    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-T62TJ48');</script>
-<!-- End Google Tag Manager -->
 
 	
 </body>

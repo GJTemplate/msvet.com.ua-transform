@@ -69,6 +69,7 @@ if(count($filters_html_array)>0){
 <form method="get" action="<?php echo JRoute::_('index.php?option=com_customfilters&view=products&Itemid='.$Itemid)?>" class="cf_form<?php echo $moduleclass_sfx;?>" id="cf_form_<?php echo $module->id?>">
 	<?php 
 
+
 	foreach($filters_html_array as $key=>$flt_html){?> 
 		<div class="cf_flt_wrapper  cf_flt_wrapper_id_<?php echo $module->id?> cf_flt_wrapper_<?php echo $direction ?>" id="cf_flt_wrapper_<?php echo $key?>">
 	
@@ -88,7 +89,9 @@ if(count($filters_html_array)>0){
 			<div class="headexpand headexpand_<?php echo $state?>"	id="headexpand_<?php echo $key?>"></div>
 				<?php echo $filter_headers_array[$key]?>
 		</div>		
-		<?php		
+		<?php
+
+
 		//add a script for the toggle	
 		$state = 'hide';	//// GARTES //////	
 		$filters_render_array['scriptProcesses'][]="customFilters.createToggle('".$key."','$state');";

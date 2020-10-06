@@ -189,7 +189,10 @@ if (VmConfig::get ('showCategory', 1) and empty($this->keyword)) {
 		</div>
 	<?php } ?>
    
-    <?php 
+    <?php
+    die(__FILE__ .' '. __LINE__ );
+
+
 	if (!empty($this->products)) {?>
 		<div class="orderby-displaynumber row-fluid">
             	
@@ -216,6 +219,11 @@ if (VmConfig::get ('showCategory', 1) and empty($this->keyword)) {
     		<!-- end of orderby-displaynumber -->
 	<?php 
     }// end if
+
+
+
+
+
 	?>
 
 	<div class="browse-view ajaxNavigation">
