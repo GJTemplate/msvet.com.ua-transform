@@ -17,6 +17,7 @@ $doc->addCustomTag($head);
 /*--- END Микроразметка Open Graph для карточки товара ---*/
 
 
+
 if (empty($this->product)) {
 	echo vmText::_('COM_VIRTUEMART_PRODUCT_NOT_FOUND');
 	echo '<br /><br />  ' . $this->continue_link_html;
@@ -548,11 +549,13 @@ $pathwayText = implode('/' , $pathwayNames );
 		<!--Содержание 5 вкладки-->
         <div id="tab_c5">
 			<?php
-            echo $this->product->event->afterDisplayContent; 
+
+            
+//            echo $this->product->event->afterDisplayContent;
 			$comments = JPATH_ROOT . '/components/com_jcomments/jcomments.php';
 			if (file_exists($comments)) {
 				require_once($comments);
-				echo JComments::showComments($this->product->virtuemart_product_id, 'com_virtuemart', $this->product->product_name);
+				echo \JComments::showComments($this->product->virtuemart_product_id, 'com_virtuemart', $this->product->product_name);
 			}?>
     		<?php
     		//  echo $this->loadTemplate('reviews'); ?>
